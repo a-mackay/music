@@ -3,8 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import {albumsByArtist} from './Albums.js';
 
-// console.log(minutesPerYear());
-
 function App() {
     return (
         <div className="App">
@@ -70,30 +68,47 @@ function VerticalBarChart({minsPerYear}) {
     const maxYear = Math.max(...years);
     const maxMinutes = Math.max(...minutes);
 
+    function getMins(year) {
+        const matchingEntry = minsPerYear.find(entry => parseInt(entry.year) === year);
+        if (matchingEntry === undefined) {
+            return 0;
+        } else {
+            return Math.round(matchingEntry.totalMinutes / maxMinutes * 100);
+        }
+    }
+
     const percentages = [];
     for (let year = minYear; year <= maxYear; year++) {
         percentages.push({
             year: year,
-            percentage: Math.round(minsPerYear[year] / maxMinutes * 100),
+            percentage: getMins(year),
         })
     };
 
     return (
-        <div className="vertical-bar-chart">
-            {percentages.map(entry => <VerticalBar label={entry.year} percentage={entry.percentage}/>)}
+        <div className="vertical-bar-chart-container">
+            <div className="vertical-bar-chart">
+                <div className="vertical-bar-spacer-item"/>
+                {percentages.map(entry => <VerticalBarItem label={entry.year} percentage={entry.percentage}/>)}
+                <div className="vertical-bar-spacer-item"/>
+            </div>
         </div>
     );
 }
 
-function VerticalBar({label, percentage}) {
+function VerticalBarItem({label, percentage}) {
     const style = {
-        width: percentage.toString() + "%",
+        height: percentage.toString() + "%",
     };
 
     return (
         <div className="vertical-bar-item">
-            <div className="vertical-bar"></div>
-            <div className="vertical-bar-label">{label}</div>
+            <div className="vertical-bar-container">
+                <div className="vertical-bar" style={style}></div>
+            </div>
+            <div className="vertical-bar-label-container">
+                <p className="vertical-bar-label">{label}</p>
+            </div>
         </div>
     );
 }
