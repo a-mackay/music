@@ -1,6 +1,15 @@
-export function albumsByArtist() {
-    return {
-    "!!!": [
+export interface Album {
+    artist: string;
+    genre: string;
+    name: string;
+    totalDurationInSeconds: number;
+    year: number;
+    iLikeThisAlbumALot?: boolean;
+}
+
+export function albumsByArtist(): Map<string, Array<Album>> {
+    return new Map([
+    ["!!!",  [
         {
             "artist": "!!!",
             "genre": "Electronic",
@@ -8,8 +17,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 427,
             "year": 2007
         }
-    ],
-    "A Tribe Called Quest": [
+    ]],
+    ["A Tribe Called Quest",  [
         {
             "artist": "A Tribe Called Quest",
             "genre": "Hip-Hop",
@@ -24,8 +33,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3618,
             "year": 2016
         }
-    ],
-    "A1 People": [
+    ]],
+    ["A1 People",  [
         {
             "artist": "A1 People",
             "genre": "Electronic",
@@ -33,8 +42,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3485,
             "year": 2002
         }
-    ],
-    "Aceyalone & RJD2": [
+    ]],
+    ["Aceyalone & RJD2",  [
         {
             "artist": "Aceyalone & RJD2",
             "genre": "Hip-Hop",
@@ -42,8 +51,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3108,
             "year": 2006
         }
-    ],
-    "Aesop Rock": [
+    ]],
+    ["Aesop Rock",  [
         {
             "artist": "Aesop Rock",
             "genre": "Hip-Hop",
@@ -58,8 +67,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3310,
             "year": 2012
         }
-    ],
-    "Aesop Rock & Homeboy Sandman": [
+    ]],
+    ["Aesop Rock & Homeboy Sandman",  [
         {
             "artist": "Aesop Rock & Homeboy Sandman",
             "genre": "Hip-Hop",
@@ -88,8 +97,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1062,
             "year": 2017
         }
-    ],
-    "Amon Duul": [
+    ]],
+    ["Amon Duul",  [
         {
             "artist": "Amon Duul",
             "genre": "Psychedelic Rock",
@@ -97,8 +106,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2657,
             "year": 1970
         }
-    ],
-    "Amon Duul II": [
+    ]],
+    ["Amon Duul II",  [
         {
             "artist": "Amon Duul II",
             "genre": "Krautrock",
@@ -106,8 +115,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3751,
             "year": 1969
         }
-    ],
-    "Amon Tobin": [
+    ]],
+    ["Amon Tobin",  [
         {
             "artist": "Amon Tobin",
             "genre": "Electronica",
@@ -164,8 +173,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2788,
             "year": 2003
         }
-    ],
-    "Animal Collective": [
+    ]],
+    ["Animal Collective",  [
         {
             "artist": "Animal Collective",
             "genre": "Electronica",
@@ -201,8 +210,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3171,
             "year": 2004
         }
-    ],
-    "Area": [
+    ]],
+    ["Area",  [
         {
             "artist": "Area",
             "genre": "Progressive Rock",
@@ -238,8 +247,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2525,
             "year": 1976
         }
-    ],
-    "Army Of The Pharaohs": [
+    ]],
+    ["Army Of The Pharaohs",  [
         {
             "artist": "Army Of The Pharaohs",
             "genre": "Hip-Hop",
@@ -247,8 +256,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3995,
             "year": 2007
         }
-    ],
-    "Autohorse": [
+    ]],
+    ["Autohorse",  [
         {
             "artist": "Autohorse",
             "genre": "Electronica",
@@ -256,8 +265,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1219,
             "year": 2004
         }
-    ],
-    "Autolux": [
+    ]],
+    ["Autolux",  [
         {
             "artist": "Autolux",
             "genre": "Alternative Rock",
@@ -265,8 +274,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3113,
             "year": 2004
         }
-    ],
-    "Battles": [
+    ]],
+    ["Battles",  [
         {
             "artist": "Battles",
             "genre": "Math Rock",
@@ -288,8 +297,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3112,
             "year": 2007
         }
-    ],
-    "Beastie Boys": [
+    ]],
+    ["Beastie Boys",  [
         {
             "artist": "Beastie Boys",
             "genre": "Hip-Hop",
@@ -297,8 +306,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3568,
             "year": 1994
         }
-    ],
-    "Beatless": [
+    ]],
+    ["Beatless",  [
         {
             "artist": "Beatless",
             "genre": "Downtempo",
@@ -306,8 +315,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3934,
             "year": 2001
         }
-    ],
-    "Beats Antique": [
+    ]],
+    ["Beats Antique",  [
         {
             "artist": "Beats Antique",
             "genre": "Worldtronica",
@@ -329,8 +338,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3391,
             "year": 2007
         }
-    ],
-    "Big Boi": [
+    ]],
+    ["Big Boi",  [
         {
             "artist": "Big Boi",
             "genre": "Hip-Hop",
@@ -338,8 +347,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4283,
             "year": 2010
         }
-    ],
-    "Bikini Kill": [
+    ]],
+    ["Bikini Kill",  [
         {
             "artist": "Bikini Kill",
             "genre": "Punk Rock",
@@ -347,8 +356,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1611,
             "year": 1996
         }
-    ],
-    "Black Sabbath": [
+    ]],
+    ["Black Sabbath",  [
         {
             "artist": "Black Sabbath",
             "genre": "Rock",
@@ -363,8 +372,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2517,
             "year": 1970
         }
-    ],
-    "Blackalicious": [
+    ]],
+    ["Blackalicious",  [
         {
             "artist": "Blackalicious",
             "genre": "Hip-Hop",
@@ -379,8 +388,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3454,
             "year": 1994
         }
-    ],
-    "Blu": [
+    ]],
+    ["Blu",  [
         {
             "artist": "Blu",
             "genre": "Hip-Hop",
@@ -388,8 +397,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3551,
             "year": 2011
         }
-    ],
-    "Blur": [
+    ]],
+    ["Blur",  [
         {
             "artist": "Blur",
             "genre": "Rock",
@@ -397,8 +406,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 122,
             "year": 1997
         }
-    ],
-    "Bonobo": [
+    ]],
+    ["Bonobo",  [
         {
             "artist": "Bonobo",
             "genre": "Electronica",
@@ -413,8 +422,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3063,
             "year": 2006
         }
-    ],
-    "Booka Shade": [
+    ]],
+    ["Booka Shade",  [
         {
             "artist": "Booka Shade",
             "genre": "Electronic",
@@ -422,8 +431,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4160,
             "year": 2007
         }
-    ],
-    "Boredoms": [
+    ]],
+    ["Boredoms",  [
         {
             "artist": "Boredoms",
             "genre": "Noise Rock",
@@ -438,8 +447,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3922,
             "year": 1992
         }
-    ],
-    "Boris": [
+    ]],
+    ["Boris",  [
         {
             "artist": "Boris",
             "genre": "Noise Rock",
@@ -447,8 +456,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3321,
             "year": 2005
         }
-    ],
-    "Bot'Ox": [
+    ]],
+    ["Bot'Ox",  [
         {
             "artist": "Bot'Ox",
             "genre": "Electronic",
@@ -456,8 +465,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 402,
             "year": 2008
         }
-    ],
-    "Brian May": [
+    ]],
+    ["Brian May",  [
         {
             "artist": "Brian May",
             "genre": "Soundtrack",
@@ -465,8 +474,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2105,
             "year": 1988
         }
-    ],
-    "Broken Bells": [
+    ]],
+    ["Broken Bells",  [
         {
             "artist": "Broken Bells",
             "genre": "Alternative",
@@ -474,8 +483,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2247,
             "year": 2010
         }
-    ],
-    "Brutus": [
+    ]],
+    ["Brutus",  [
         {
             "artist": "Brutus",
             "genre": "Psychedelic Rock",
@@ -483,8 +492,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2661,
             "year": 2010
         }
-    ],
-    "Burial": [
+    ]],
+    ["Burial",  [
         {
             "artist": "Burial",
             "genre": "Dubstep",
@@ -499,8 +508,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1533,
             "year": 2012
         }
-    ],
-    "Busta Rhymes": [
+    ]],
+    ["Busta Rhymes",  [
         {
             "artist": "Busta Rhymes",
             "genre": "Hip-Hop",
@@ -522,8 +531,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4376,
             "year": 1997
         }
-    ],
-    "Camille Jones & Fedde Le Grand": [
+    ]],
+    ["Camille Jones & Fedde Le Grand",  [
         {
             "artist": "Camille Jones & Fedde Le Grand",
             "genre": "Electronic",
@@ -531,8 +540,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 150,
             "year": 2007
         }
-    ],
-    "Campfire Songs": [
+    ]],
+    ["Campfire Songs",  [
         {
             "artist": "Campfire Songs",
             "genre": "Psychedelic Folk",
@@ -540,8 +549,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2531,
             "year": 2001
         }
-    ],
-    "Can": [
+    ]],
+    ["Can",  [
         {
             "artist": "Can",
             "genre": "Krautrock",
@@ -549,8 +558,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2286,
             "year": 1969
         }
-    ],
-    "Cannibal Ox": [
+    ]],
+    ["Cannibal Ox",  [
         {
             "artist": "Cannibal Ox",
             "genre": "Hip Hop",
@@ -558,8 +567,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4429,
             "year": 2001
         }
-    ],
-    "Captain Beefheart & His Magic Band": [
+    ]],
+    ["Captain Beefheart & His Magic Band",  [
         {
             "artist": "Captain Beefheart & His Magic Band",
             "genre": "Blues Rock",
@@ -574,8 +583,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2245,
             "year": 1967
         }
-    ],
-    "Captain Murphy": [
+    ]],
+    ["Captain Murphy",  [
         {
             "artist": "Captain Murphy",
             "genre": "Hip-Hop",
@@ -590,8 +599,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1602,
             "year": 2012
         }
-    ],
-    "Caravan Palace": [
+    ]],
+    ["Caravan Palace",  [
         {
             "artist": "Caravan Palace",
             "genre": "Electroswing",
@@ -599,8 +608,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3283,
             "year": 2008
         }
-    ],
-    "Cat Mother & The All-Night News Boys": [
+    ]],
+    ["Cat Mother & The All-Night News Boys",  [
         {
             "artist": "Cat Mother & The All-Night News Boys",
             "genre": "Blues Rock",
@@ -608,8 +617,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2993,
             "year": 1968
         }
-    ],
-    "Chad VanGaalen": [
+    ]],
+    ["Chad VanGaalen",  [
         {
             "artist": "Chad VanGaalen",
             "genre": "Alternative",
@@ -617,8 +626,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2510,
             "year": 2014
         }
-    ],
-    "Chances With Wolves": [
+    ]],
+    ["Chances With Wolves",  [
         {
             "artist": "Chances With Wolves",
             "genre": "Mix",
@@ -626,8 +635,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 7169,
             "year": 2014
         }
-    ],
-    "Chin Chin": [
+    ]],
+    ["Chin Chin",  [
         {
             "artist": "Chin Chin",
             "genre": "Funk",
@@ -642,8 +651,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2528,
             "year": 2008
         }
-    ],
-    "Circle Pit": [
+    ]],
+    ["Circle Pit",  [
         {
             "artist": "Circle Pit",
             "genre": "Rock",
@@ -651,8 +660,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2405,
             "year": 2010
         }
-    ],
-    "Circulatory System": [
+    ]],
+    ["Circulatory System",  [
         {
             "artist": "Circulatory System",
             "genre": "Rock",
@@ -660,8 +669,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3581,
             "year": 2014
         }
-    ],
-    "Clipping": [
+    ]],
+    ["Clipping",  [
         {
             "artist": "Clipping",
             "genre": "Hip-Hop",
@@ -683,8 +692,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 485,
             "year": 2014
         }
-    ],
-    "Company Flow": [
+    ]],
+    ["Company Flow",  [
         {
             "artist": "Company Flow",
             "genre": "Hip-Hop",
@@ -692,8 +701,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4432,
             "year": 1997
         }
-    ],
-    "Comus": [
+    ]],
+    ["Comus",  [
         {
             "artist": "Comus",
             "genre": "Psychedelic Folk",
@@ -701,8 +710,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2998,
             "year": 1971
         }
-    ],
-    "Copeland": [
+    ]],
+    ["Copeland",  [
         {
             "artist": "Copeland",
             "genre": "Dub",
@@ -710,8 +719,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1760,
             "year": 2014
         }
-    ],
-    "Count Bass D": [
+    ]],
+    ["Count Bass D",  [
         {
             "artist": "Count Bass D",
             "genre": "Hip-Hop",
@@ -719,8 +728,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4300,
             "year": 2002
         }
-    ],
-    "Craig Leon": [
+    ]],
+    ["Craig Leon",  [
         {
             "artist": "Craig Leon",
             "genre": "Electronica",
@@ -728,8 +737,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4403,
             "year": 2014
         }
-    ],
-    "Crazy Wisdom Masters": [
+    ]],
+    ["Crazy Wisdom Masters",  [
         {
             "artist": "Crazy Wisdom Masters",
             "genre": "Hip-Hop",
@@ -744,8 +753,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 841,
             "year": 1999
         }
-    ],
-    "Cream": [
+    ]],
+    ["Cream",  [
         {
             "artist": "Cream",
             "genre": "Psychedelic Rock",
@@ -760,8 +769,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 5609,
             "year": 1967
         }
-    ],
-    "Crookers": [
+    ]],
+    ["Crookers",  [
         {
             "artist": "Crookers",
             "genre": "Electronic",
@@ -769,8 +778,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 869,
             "year": 2008
         }
-    ],
-    "Cujo": [
+    ]],
+    ["Cujo",  [
         {
             "artist": "Cujo",
             "genre": "Electronic",
@@ -785,8 +794,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2007,
             "year": 1996
         }
-    ],
-    "Cut Chemist": [
+    ]],
+    ["Cut Chemist",  [
         {
             "artist": "Cut Chemist",
             "genre": "Hip-Hop",
@@ -885,8 +894,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1676,
             "year": 2004
         }
-    ],
-    "Cut Chemist & DJ Shadow": [
+    ]],
+    ["Cut Chemist & DJ Shadow",  [
         {
             "artist": "Cut Chemist & DJ Shadow",
             "genre": "Turntablist",
@@ -915,8 +924,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4735,
             "year": 2008
         }
-    ],
-    "Cut Chemist Meets Shortkut": [
+    ]],
+    ["Cut Chemist Meets Shortkut",  [
         {
             "artist": "Cut Chemist Meets Shortkut",
             "genre": "Hip-Hop",
@@ -924,8 +933,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4188,
             "year": 1998
         }
-    ],
-    "Czardust": [
+    ]],
+    ["Czardust",  [
         {
             "artist": "Czardust",
             "genre": "Hip-Hop",
@@ -933,8 +942,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2009,
             "year": 2019
         }
-    ],
-    "DD Dumbo": [
+    ]],
+    ["DD Dumbo",  [
         {
             "artist": "DD Dumbo",
             "genre": "Alternative",
@@ -942,8 +951,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2225,
             "year": 2016
         }
-    ],
-    "DJ Nigga Fox": [
+    ]],
+    ["DJ Nigga Fox",  [
         {
             "artist": "DJ Nigga Fox",
             "genre": "Electronic",
@@ -979,8 +988,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1021,
             "year": 2013
         }
-    ],
-    "DJ Shadow": [
+    ]],
+    ["DJ Shadow",  [
         {
             "artist": "DJ Shadow",
             "genre": "Electronica",
@@ -1009,8 +1018,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4571,
             "year": 2002
         }
-    ],
-    "DJ Vadim": [
+    ]],
+    ["DJ Vadim",  [
         {
             "artist": "DJ Vadim",
             "genre": "Hip-Hop",
@@ -1032,8 +1041,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4411,
             "year": 1999
         }
-    ],
-    "DOOM": [
+    ]],
+    ["DOOM",  [
         {
             "artist": "DOOM",
             "genre": "Hip-Hop",
@@ -1125,8 +1134,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 786,
             "year": 2003
         }
-    ],
-    "DOOM & Trunks": [
+    ]],
+    ["DOOM & Trunks",  [
         {
             "artist": "DOOM & Trunks",
             "genre": "Hip-Hop",
@@ -1134,8 +1143,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 887,
             "year": 2008
         }
-    ],
-    "DRC Music": [
+    ]],
+    ["DRC Music",  [
         {
             "artist": "DRC Music",
             "genre": "Congolese",
@@ -1143,8 +1152,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3066,
             "year": 2011
         }
-    ],
-    "Dagha": [
+    ]],
+    ["Dagha",  [
         {
             "artist": "Dagha",
             "genre": "Hip-Hop",
@@ -1152,8 +1161,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2598,
             "year": 2008
         }
-    ],
-    "Danger Doom": [
+    ]],
+    ["Danger Doom",  [
         {
             "artist": "Danger Doom",
             "genre": "Hip-Hop",
@@ -1161,8 +1170,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2388,
             "year": 2005
         }
-    ],
-    "Danger Mouse": [
+    ]],
+    ["Danger Mouse",  [
         {
             "artist": "Danger Mouse",
             "genre": "Hip-Hop",
@@ -1170,8 +1179,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2680,
             "year": 2004
         }
-    ],
-    "Danimals": [
+    ]],
+    ["Danimals",  [
         {
             "artist": "Danimals",
             "genre": "Electronic",
@@ -1179,8 +1188,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 194,
             "year": 2010
         }
-    ],
-    "Danny Brown": [
+    ]],
+    ["Danny Brown",  [
         {
             "artist": "Danny Brown",
             "genre": "Hip-Hop",
@@ -1223,8 +1232,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3189,
             "year": 2011
         }
-    ],
-    "Darkside": [
+    ]],
+    ["Darkside",  [
         {
             "artist": "Darkside",
             "genre": "Electronica",
@@ -1232,8 +1241,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2686,
             "year": 2013
         }
-    ],
-    "Dave Spoon": [
+    ]],
+    ["Dave Spoon",  [
         {
             "artist": "Dave Spoon",
             "genre": "House",
@@ -1241,8 +1250,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 281,
             "year": 2009
         }
-    ],
-    "David Holmes": [
+    ]],
+    ["David Holmes",  [
         {
             "artist": "David Holmes",
             "genre": "Electronica",
@@ -1250,8 +1259,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3560,
             "year": 1997
         }
-    ],
-    "De La Soul": [
+    ]],
+    ["De La Soul",  [
         {
             "artist": "De La Soul",
             "genre": "Hip-Hop",
@@ -1266,8 +1275,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3154,
             "year": 2004
         }
-    ],
-    "Dead Meadow": [
+    ]],
+    ["Dead Meadow",  [
         {
             "artist": "Dead Meadow",
             "genre": "Rock",
@@ -1310,8 +1319,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 5437,
             "year": 2010
         }
-    ],
-    "Death Grips": [
+    ]],
+    ["Death Grips",  [
         {
             "artist": "Death Grips",
             "genre": "Hip-Hop",
@@ -1347,8 +1356,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2477,
             "year": 2012
         }
-    ],
-    "Declaime": [
+    ]],
+    ["Declaime",  [
         {
             "artist": "Declaime",
             "genre": "Hip-Hop",
@@ -1356,8 +1365,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1436,
             "year": 2005
         }
-    ],
-    "Deerhunter": [
+    ]],
+    ["Deerhunter",  [
         {
             "artist": "Deerhunter",
             "genre": "Alternative",
@@ -1365,8 +1374,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2757,
             "year": 2010
         }
-    ],
-    "Dels": [
+    ]],
+    ["Dels",  [
         {
             "artist": "Dels",
             "genre": "Hip-Hop",
@@ -1388,8 +1397,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 372,
             "year": 2008
         }
-    ],
-    "Deltron 3030": [
+    ]],
+    ["Deltron 3030",  [
         {
             "artist": "Deltron 3030",
             "genre": "Hip-Hop",
@@ -1404,8 +1413,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 790,
             "year": 2000
         }
-    ],
-    "Denaun Porter": [
+    ]],
+    ["Denaun Porter",  [
         {
             "artist": "Denaun Porter",
             "genre": "Hip-Hop",
@@ -1413,8 +1422,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1509,
             "year": 2013
         }
-    ],
-    "Denzel Curry": [
+    ]],
+    ["Denzel Curry",  [
         {
             "artist": "Denzel Curry",
             "genre": "Hip-Hop",
@@ -1422,8 +1431,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1742,
             "year": 2019
         }
-    ],
-    "Devo": [
+    ]],
+    ["Devo",  [
         {
             "artist": "Devo",
             "genre": "Synthpop",
@@ -1431,8 +1440,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2080,
             "year": 1979
         }
-    ],
-    "Die Antwoord": [
+    ]],
+    ["Die Antwoord",  [
         {
             "artist": "Die Antwoord",
             "genre": "Hip-Hop",
@@ -1447,8 +1456,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2326,
             "year": 2012
         }
-    ],
-    "Digable Planets": [
+    ]],
+    ["Digable Planets",  [
         {
             "artist": "Digable Planets",
             "genre": "Hip-Hop",
@@ -1456,8 +1465,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3695,
             "year": 1994
         }
-    ],
-    "Dilla, Ghost, Doom": [
+    ]],
+    ["Dilla, Ghost, Doom",  [
         {
             "artist": "Dilla, Ghost, Doom",
             "genre": "Hip-Hop",
@@ -1465,8 +1474,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 514,
             "year": 2008
         }
-    ],
-    "Dimlite": [
+    ]],
+    ["Dimlite",  [
         {
             "artist": "Dimlite",
             "genre": "Electronic",
@@ -1474,8 +1483,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3370,
             "year": 2011
         }
-    ],
-    "Diplo": [
+    ]],
+    ["Diplo",  [
         {
             "artist": "Diplo",
             "genre": "Electronica",
@@ -1497,8 +1506,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3127,
             "year": 2004
         }
-    ],
-    "Diplo & Datsik": [
+    ]],
+    ["Diplo & Datsik",  [
         {
             "artist": "Diplo & Datsik",
             "genre": "Dubstep",
@@ -1506,8 +1515,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 339,
             "year": 2011
         }
-    ],
-    "Dirty Art Club": [
+    ]],
+    ["Dirty Art Club",  [
         {
             "artist": "Dirty Art Club",
             "genre": "Electronic",
@@ -1515,8 +1524,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1287,
             "year": 2012
         }
-    ],
-    "Dirty Projectors": [
+    ]],
+    ["Dirty Projectors",  [
         {
             "artist": "Dirty Projectors",
             "genre": "Alternative",
@@ -1524,8 +1533,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2468,
             "year": 2009
         }
-    ],
-    "Dizzee Rascal": [
+    ]],
+    ["Dizzee Rascal",  [
         {
             "artist": "Dizzee Rascal",
             "genre": "Grime",
@@ -1533,8 +1542,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3434,
             "year": 2003
         }
-    ],
-    "Dogfeet": [
+    ]],
+    ["Dogfeet",  [
         {
             "artist": "Dogfeet",
             "genre": "Progressive Rock",
@@ -1542,8 +1551,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 669,
             "year": 1970
         }
-    ],
-    "Don Caballero": [
+    ]],
+    ["Don Caballero",  [
         {
             "artist": "Don Caballero",
             "genre": "Math Rock",
@@ -1551,8 +1560,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3345,
             "year": 2000
         }
-    ],
-    "Donovan": [
+    ]],
+    ["Donovan",  [
         {
             "artist": "Donovan",
             "genre": "Folk",
@@ -1574,8 +1583,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2521,
             "year": 1965
         }
-    ],
-    "Doves": [
+    ]],
+    ["Doves",  [
         {
             "artist": "Doves",
             "genre": "Alternative",
@@ -1583,8 +1592,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4328,
             "year": 2000
         }
-    ],
-    "Dr. Octagon": [
+    ]],
+    ["Dr. Octagon",  [
         {
             "artist": "Dr. Octagon",
             "genre": "Hip-Hop",
@@ -1592,8 +1601,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4102,
             "year": 1996
         }
-    ],
-    "Dubblestandart": [
+    ]],
+    ["Dubblestandart",  [
         {
             "artist": "Dubblestandart",
             "genre": "Dubstep",
@@ -1601,8 +1610,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1323,
             "year": 2008
         }
-    ],
-    "Dudley Perkins": [
+    ]],
+    ["Dudley Perkins",  [
         {
             "artist": "Dudley Perkins",
             "genre": "Hip-Hop",
@@ -1617,8 +1626,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2518,
             "year": 2006
         }
-    ],
-    "Earl Sweatshirt": [
+    ]],
+    ["Earl Sweatshirt",  [
         {
             "artist": "Earl Sweatshirt",
             "genre": "Hip-Hop",
@@ -1626,8 +1635,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 923,
             "year": 2019
         }
-    ],
-    "EarthGang": [
+    ]],
+    ["EarthGang",  [
         {
             "artist": "EarthGang",
             "genre": "Hip-Hop",
@@ -1635,8 +1644,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4836,
             "year": 2013
         }
-    ],
-    "Edan": [
+    ]],
+    ["Edan",  [
         {
             "artist": "Edan",
             "genre": "Hip-Hop",
@@ -1721,8 +1730,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1106,
             "year": 2005
         }
-    ],
-    "Egon": [
+    ]],
+    ["Egon",  [
         {
             "artist": "Egon",
             "genre": "Rock",
@@ -1737,8 +1746,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2995,
             "year": 2014
         }
-    ],
-    "El-P": [
+    ]],
+    ["El-P",  [
         {
             "artist": "El-P",
             "genre": "Hip-Hop",
@@ -1809,8 +1818,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2787,
             "year": 2010
         }
-    ],
-    "Elton John": [
+    ]],
+    ["Elton John",  [
         {
             "artist": "Elton John",
             "genre": "Pop",
@@ -1818,8 +1827,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 605,
             "year": 2010
         }
-    ],
-    "Emerson, Lake & Palmer": [
+    ]],
+    ["Emerson, Lake & Palmer",  [
         {
             "artist": "Emerson, Lake & Palmer",
             "genre": "Progressive Rock",
@@ -1862,8 +1871,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2775,
             "year": 1977
         }
-    ],
-    "Emika": [
+    ]],
+    ["Emika",  [
         {
             "artist": "Emika",
             "genre": "Electronic",
@@ -1871,8 +1880,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1563,
             "year": 2011
         }
-    ],
-    "Evil Nine": [
+    ]],
+    ["Evil Nine",  [
         {
             "artist": "Evil Nine",
             "genre": "Electronic",
@@ -1894,8 +1903,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3159,
             "year": 2004
         }
-    ],
-    "FKA twigs": [
+    ]],
+    ["FKA twigs",  [
         {
             "artist": "FKA twigs",
             "genre": "Electronic",
@@ -1910,8 +1919,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2329,
             "year": 2019
         }
-    ],
-    "Fat Hed": [
+    ]],
+    ["Fat Hed",  [
         {
             "artist": "Fat Hed",
             "genre": "Hip-Hop",
@@ -1926,8 +1935,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1619,
             "year": 2013
         }
-    ],
-    "Faust": [
+    ]],
+    ["Faust",  [
         {
             "artist": "Faust",
             "genre": "Krautrock",
@@ -1942,8 +1951,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3417,
             "year": 1973
         }
-    ],
-    "Fedde Le Grand": [
+    ]],
+    ["Fedde Le Grand",  [
         {
             "artist": "Fedde Le Grand",
             "genre": "House",
@@ -1951,8 +1960,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 399,
             "year": 2006
         }
-    ],
-    "Flash": [
+    ]],
+    ["Flash",  [
         {
             "artist": "Flash",
             "genre": "Progressive Rock",
@@ -1988,8 +1997,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2042,
             "year": 1973
         }
-    ],
-    "Flying Lotus": [
+    ]],
+    ["Flying Lotus",  [
         {
             "artist": "Flying Lotus",
             "genre": "Electronic",
@@ -2018,8 +2027,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2284,
             "year": 2014
         }
-    ],
-    "Foxygen": [
+    ]],
+    ["Foxygen",  [
         {
             "artist": "Foxygen",
             "genre": "Indie Rock",
@@ -2027,8 +2036,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2206,
             "year": 2013
         }
-    ],
-    "Frank Ocean": [
+    ]],
+    ["Frank Ocean",  [
         {
             "artist": "Frank Ocean",
             "genre": "R&B",
@@ -2036,8 +2045,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3731,
             "year": 2012
         }
-    ],
-    "Frank Zappa": [
+    ]],
+    ["Frank Zappa",  [
         {
             "artist": "Frank Zappa",
             "genre": "Jazz Fusion",
@@ -2045,8 +2054,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2223,
             "year": 1972
         }
-    ],
-    "Freddie Gibbs & Madlib": [
+    ]],
+    ["Freddie Gibbs & Madlib",  [
         {
             "artist": "Freddie Gibbs & Madlib",
             "genre": "Hip-Hop",
@@ -2124,8 +2133,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 859,
             "year": 2011
         }
-    ],
-    "GG DOOM": [
+    ]],
+    ["GG DOOM",  [
         {
             "artist": "GG DOOM",
             "genre": "Hip-Hop",
@@ -2133,8 +2142,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1080,
             "year": 2013
         }
-    ],
-    "Gary Higgins": [
+    ]],
+    ["Gary Higgins",  [
         {
             "artist": "Gary Higgins",
             "genre": "Folk",
@@ -2142,8 +2151,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3024,
             "year": 1973
         }
-    ],
-    "Gary Numan": [
+    ]],
+    ["Gary Numan",  [
         {
             "artist": "Gary Numan",
             "genre": "Electronic",
@@ -2151,8 +2160,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2457,
             "year": 1979
         }
-    ],
-    "Gentle Giant": [
+    ]],
+    ["Gentle Giant",  [
         {
             "artist": "Gentle Giant",
             "genre": "Progressive Rock",
@@ -2181,8 +2190,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2123,
             "year": 1972
         }
-    ],
-    "Georgia Anne Muldrow": [
+    ]],
+    ["Georgia Anne Muldrow",  [
         {
             "artist": "Georgia Anne Muldrow",
             "genre": "Soul",
@@ -2190,8 +2199,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2053,
             "year": 2012
         }
-    ],
-    "Ghostface Killah & DOOM": [
+    ]],
+    ["Ghostface Killah & DOOM",  [
         {
             "artist": "Ghostface Killah & DOOM",
             "genre": "Hip-Hop",
@@ -2199,8 +2208,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 695,
             "year": 2009
         }
-    ],
-    "Gil Scott-Heron": [
+    ]],
+    ["Gil Scott-Heron",  [
         {
             "artist": "Gil Scott-Heron",
             "genre": "Acoustica",
@@ -2208,8 +2217,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1696,
             "year": 2010
         }
-    ],
-    "Giraffes Giraffes": [
+    ]],
+    ["Giraffes Giraffes",  [
         {
             "artist": "Giraffes Giraffes",
             "genre": "Math Rock",
@@ -2224,8 +2233,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2034,
             "year": 2006
         }
-    ],
-    "Glows In The Dark": [
+    ]],
+    ["Glows In The Dark",  [
         {
             "artist": "Glows In The Dark",
             "genre": "Hip-Hop",
@@ -2233,8 +2242,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1963,
             "year": 2013
         }
-    ],
-    "Godspeed You Black Emperor": [
+    ]],
+    ["Godspeed You Black Emperor",  [
         {
             "artist": "Godspeed You Black Emperor",
             "genre": "Post-Rock",
@@ -2242,8 +2251,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3187,
             "year": 2012
         }
-    ],
-    "Gonjasufi": [
+    ]],
+    ["Gonjasufi",  [
         {
             "artist": "Gonjasufi",
             "genre": "Hip-Hop",
@@ -2258,8 +2267,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 596,
             "year": 2011
         }
-    ],
-    "Gorillaz": [
+    ]],
+    ["Gorillaz",  [
         {
             "artist": "Gorillaz",
             "genre": "Electronica",
@@ -2344,8 +2353,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2600,
             "year": 2010
         }
-    ],
-    "Grace Jones": [
+    ]],
+    ["Grace Jones",  [
         {
             "artist": "Grace Jones",
             "genre": "New Wave",
@@ -2353,8 +2362,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2289,
             "year": 1981
         }
-    ],
-    "Grandmaster Flash & The Furious Five": [
+    ]],
+    ["Grandmaster Flash & The Furious Five",  [
         {
             "artist": "Grandmaster Flash & The Furious Five",
             "genre": "Hip-Hop",
@@ -2362,8 +2371,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 434,
             "year": 1982
         }
-    ],
-    "Grateful Doom": [
+    ]],
+    ["Grateful Doom",  [
         {
             "artist": "Grateful Doom",
             "genre": "Hip-Hop",
@@ -2378,8 +2387,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1478,
             "year": 2011
         }
-    ],
-    "Great Society & Grace Slick": [
+    ]],
+    ["Great Society & Grace Slick",  [
         {
             "artist": "Great Society & Grace Slick",
             "genre": "Psychedelic Rock",
@@ -2387,8 +2396,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2329,
             "year": 1967
         }
-    ],
-    "Gruppo Di Improvvisazione Nuova Consonanza": [
+    ]],
+    ["Gruppo Di Improvvisazione Nuova Consonanza",  [
         {
             "artist": "Gruppo Di Improvvisazione Nuova Consonanza",
             "genre": "Experimental",
@@ -2396,8 +2405,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1612,
             "year": 1970
         }
-    ],
-    "Guilty Simpson": [
+    ]],
+    ["Guilty Simpson",  [
         {
             "artist": "Guilty Simpson",
             "genre": "Hip-Hop",
@@ -2405,8 +2414,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3463,
             "year": 2010
         }
-    ],
-    "H. P. Lovecraft": [
+    ]],
+    ["H. P. Lovecraft",  [
         {
             "artist": "H. P. Lovecraft",
             "genre": "Psychedelic Rock",
@@ -2414,8 +2423,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1926,
             "year": 1967
         }
-    ],
-    "Half Japanese": [
+    ]],
+    ["Half Japanese",  [
         {
             "artist": "Half Japanese",
             "genre": "No Wave",
@@ -2430,8 +2439,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4103,
             "year": 1980
         }
-    ],
-    "Hawkwind": [
+    ]],
+    ["Hawkwind",  [
         {
             "artist": "Hawkwind",
             "genre": "Rock",
@@ -2439,8 +2448,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3457,
             "year": 1971
         }
-    ],
-    "Hella": [
+    ]],
+    ["Hella",  [
         {
             "artist": "Hella",
             "genre": "Math Rock",
@@ -2448,8 +2457,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2044,
             "year": 2002
         }
-    ],
-    "Herbie Hancock": [
+    ]],
+    ["Herbie Hancock",  [
         {
             "artist": "Herbie Hancock",
             "genre": "Jazz",
@@ -2457,8 +2466,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2510,
             "year": 1973
         }
-    ],
-    "Here We Go Magic": [
+    ]],
+    ["Here We Go Magic",  [
         {
             "artist": "Here We Go Magic",
             "genre": "Electronica",
@@ -2473,8 +2482,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2840,
             "year": 2010
         }
-    ],
-    "Holden": [
+    ]],
+    ["Holden",  [
         {
             "artist": "Holden",
             "genre": "Electronic",
@@ -2482,8 +2491,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4529,
             "year": 2013
         }
-    ],
-    "Homeboy Sandman": [
+    ]],
+    ["Homeboy Sandman",  [
         {
             "artist": "Homeboy Sandman",
             "genre": "Hip-Hop",
@@ -2526,8 +2535,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1593,
             "year": 2014
         }
-    ],
-    "Homeboy Sandman & Edan": [
+    ]],
+    ["Homeboy Sandman & Edan",  [
         {
             "artist": "Homeboy Sandman & Edan",
             "genre": "Hip-Hop",
@@ -2535,8 +2544,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1377,
             "year": 2018
         }
-    ],
-    "Hot Chip": [
+    ]],
+    ["Hot Chip",  [
         {
             "artist": "Hot Chip",
             "genre": "Electronic",
@@ -2544,8 +2553,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3120,
             "year": 2006
         }
-    ],
-    "I Monster": [
+    ]],
+    ["I Monster",  [
         {
             "artist": "I Monster",
             "genre": "Electronic",
@@ -2553,8 +2562,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3137,
             "year": 2003
         }
-    ],
-    "Igor Boxx": [
+    ]],
+    ["Igor Boxx",  [
         {
             "artist": "Igor Boxx",
             "genre": "Electronic",
@@ -2562,8 +2571,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2846,
             "year": 2010
         }
-    ],
-    "Illfightyou": [
+    ]],
+    ["Illfightyou",  [
         {
             "artist": "Illfightyou",
             "genre": "Hip-Hop",
@@ -2571,8 +2580,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2726,
             "year": 2013
         }
-    ],
-    "Iron Butterfly": [
+    ]],
+    ["Iron Butterfly",  [
         {
             "artist": "Iron Butterfly",
             "genre": "Psychedelic Rock",
@@ -2580,8 +2589,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3485,
             "year": 1968
         }
-    ],
-    "It's A Beautiful Day": [
+    ]],
+    ["It's A Beautiful Day",  [
         {
             "artist": "It's A Beautiful Day",
             "genre": "Psychedelic Rock",
@@ -2589,8 +2598,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2422,
             "year": 1969
         }
-    ],
-    "J Dilla": [
+    ]],
+    ["J Dilla",  [
         {
             "artist": "J Dilla",
             "genre": "Hip-Hop",
@@ -2640,8 +2649,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2453,
             "year": 2001
         }
-    ],
-    "J-Zone": [
+    ]],
+    ["J-Zone",  [
         {
             "artist": "J-Zone",
             "genre": "Hip-Hop",
@@ -2768,8 +2777,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 55,
             "year": 2013
         }
-    ],
-    "JJ DOOM": [
+    ]],
+    ["JJ DOOM",  [
         {
             "artist": "JJ DOOM",
             "genre": "Hip-Hop",
@@ -2777,8 +2786,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2520,
             "year": 2012
         }
-    ],
-    "Jackson Conti": [
+    ]],
+    ["Jackson Conti",  [
         {
             "artist": "Jackson Conti",
             "genre": "Latin Jazz",
@@ -2786,8 +2795,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4369,
             "year": 2008
         }
-    ],
-    "Janelle Monae": [
+    ]],
+    ["Janelle Monae",  [
         {
             "artist": "Janelle Monae",
             "genre": "Alternative R&B",
@@ -2795,8 +2804,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4117,
             "year": 2010
         }
-    ],
-    "Jay-Z & Kanye West": [
+    ]],
+    ["Jay-Z & Kanye West",  [
         {
             "artist": "Jay-Z & Kanye West",
             "genre": "Hip-Hop",
@@ -2804,8 +2813,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4066,
             "year": 2011
         }
-    ],
-    "Jaylib": [
+    ]],
+    ["Jaylib",  [
         {
             "artist": "Jaylib",
             "genre": "Hip-Hop",
@@ -2834,8 +2843,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 806,
             "year": 2003
         }
-    ],
-    "Jefferson Airplane": [
+    ]],
+    ["Jefferson Airplane",  [
         {
             "artist": "Jefferson Airplane",
             "genre": "Psychedelic Rock",
@@ -2857,8 +2866,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3509,
             "year": 1967
         }
-    ],
-    "Jeremiah Jae & Oliver The 2nd": [
+    ]],
+    ["Jeremiah Jae & Oliver The 2nd",  [
         {
             "artist": "Jeremiah Jae & Oliver The 2nd",
             "genre": "Hip-Hop",
@@ -2866,8 +2875,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3040,
             "year": 2013
         }
-    ],
-    "Jneiro Jarel": [
+    ]],
+    ["Jneiro Jarel",  [
         {
             "artist": "Jneiro Jarel",
             "genre": "Hip-Hop",
@@ -2875,8 +2884,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2172,
             "year": 2010
         }
-    ],
-    "Johnson&Jonson": [
+    ]],
+    ["Johnson&Jonson",  [
         {
             "artist": "Johnson&Jonson",
             "genre": "Hip-Hop",
@@ -2884,8 +2893,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2711,
             "year": 2008
         }
-    ],
-    "Jonwayne": [
+    ]],
+    ["Jonwayne",  [
         {
             "artist": "Jonwayne",
             "genre": "Hip-Hop",
@@ -2900,8 +2909,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2293,
             "year": 2013
         }
-    ],
-    "Joy Division": [
+    ]],
+    ["Joy Division",  [
         {
             "artist": "Joy Division",
             "genre": "New Wave",
@@ -2916,8 +2925,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2360,
             "year": 1979
         }
-    ],
-    "Juice Aleem": [
+    ]],
+    ["Juice Aleem",  [
         {
             "artist": "Juice Aleem",
             "genre": "Hip-Hop",
@@ -2925,8 +2934,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2999,
             "year": 2009
         }
-    ],
-    "July": [
+    ]],
+    ["July",  [
         {
             "artist": "July",
             "genre": "Psychedelic Rock",
@@ -2948,8 +2957,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1886,
             "year": 1995
         }
-    ],
-    "Jurassic 5": [
+    ]],
+    ["Jurassic 5",  [
         {
             "artist": "Jurassic 5",
             "genre": "Hip-Hop",
@@ -2971,8 +2980,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3284,
             "year": 2000
         }
-    ],
-    "KMD": [
+    ]],
+    ["KMD",  [
         {
             "artist": "KMD",
             "genre": "Hip-Hop",
@@ -2980,8 +2989,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2649,
             "year": 2000
         }
-    ],
-    "Kaleidoscope": [
+    ]],
+    ["Kaleidoscope",  [
         {
             "artist": "Kaleidoscope",
             "genre": "Psychedelic Folk",
@@ -2989,8 +2998,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1586,
             "year": 1967
         }
-    ],
-    "Kanye West": [
+    ]],
+    ["Kanye West",  [
         {
             "artist": "Kanye West",
             "genre": "Hip-Hop",
@@ -3033,8 +3042,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2402,
             "year": 2013
         }
-    ],
-    "Kate Bush": [
+    ]],
+    ["Kate Bush",  [
         {
             "artist": "Kate Bush",
             "genre": "Pop",
@@ -3042,8 +3051,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2836,
             "year": 1985
         }
-    ],
-    "Kazi & Madlib": [
+    ]],
+    ["Kazi & Madlib",  [
         {
             "artist": "Kazi & Madlib",
             "genre": "Hip-Hop",
@@ -3051,8 +3060,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3797,
             "year": 1996
         }
-    ],
-    "Kendrick Lamar": [
+    ]],
+    ["Kendrick Lamar",  [
         {
             "artist": "Kendrick Lamar",
             "genre": "Hip-Hop",
@@ -3123,8 +3132,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2046,
             "year": 2016
         }
-    ],
-    "Kid Koala": [
+    ]],
+    ["Kid Koala",  [
         {
             "artist": "Kid Koala",
             "genre": "Turntablist",
@@ -3146,8 +3155,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2097,
             "year": 2003
         }
-    ],
-    "Killer Mike": [
+    ]],
+    ["Killer Mike",  [
         {
             "artist": "Killer Mike",
             "genre": "Hip-Hop",
@@ -3197,8 +3206,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2746,
             "year": 2012
         }
-    ],
-    "King Cannibal": [
+    ]],
+    ["King Cannibal",  [
         {
             "artist": "King Cannibal",
             "genre": "Electronica",
@@ -3206,8 +3215,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3562,
             "year": 2009
         }
-    ],
-    "King Crimson": [
+    ]],
+    ["King Crimson",  [
         {
             "artist": "King Crimson",
             "genre": "Progressive Rock",
@@ -3369,8 +3378,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4031,
             "year": 1975
         }
-    ],
-    "King Geedorah": [
+    ]],
+    ["King Geedorah",  [
         {
             "artist": "King Geedorah",
             "genre": "Hip-Hop",
@@ -3378,8 +3387,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2514,
             "year": 2003
         }
-    ],
-    "King Midas Sound": [
+    ]],
+    ["King Midas Sound",  [
         {
             "artist": "King Midas Sound",
             "genre": "Electronica",
@@ -3387,8 +3396,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2804,
             "year": 2009
         }
-    ],
-    "Kinky": [
+    ]],
+    ["Kinky",  [
         {
             "artist": "Kinky",
             "genre": "Alternative Pop",
@@ -3403,8 +3412,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2633,
             "year": 2006
         }
-    ],
-    "Kool Keith": [
+    ]],
+    ["Kool Keith",  [
         {
             "artist": "Kool Keith",
             "genre": "Hip-Hop",
@@ -3426,8 +3435,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4042,
             "year": 2018
         }
-    ],
-    "Krondon": [
+    ]],
+    ["Krondon",  [
         {
             "artist": "Krondon",
             "genre": "Hip-Hop",
@@ -3435,8 +3444,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 103,
             "year": 2016
         }
-    ],
-    "Kwes": [
+    ]],
+    ["Kwes",  [
         {
             "artist": "Kwes",
             "genre": "Electronic",
@@ -3444,8 +3453,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1012,
             "year": 2012
         }
-    ],
-    "Kwesachu": [
+    ]],
+    ["Kwesachu",  [
         {
             "artist": "Kwesachu",
             "genre": "Electronic",
@@ -3453,8 +3462,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3080,
             "year": 2009
         }
-    ],
-    "LOrange & Kool Keith": [
+    ]],
+    ["LOrange & Kool Keith",  [
         {
             "artist": "LOrange & Kool Keith",
             "genre": "Hip-Hop",
@@ -3462,8 +3471,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2007,
             "year": 2015
         }
-    ],
-    "Le1f": [
+    ]],
+    ["Le1f",  [
         {
             "artist": "Le1f",
             "genre": "Hip-Hop",
@@ -3471,8 +3480,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3967,
             "year": 2012
         }
-    ],
-    "Led Zeppelin": [
+    ]],
+    ["Led Zeppelin",  [
         {
             "artist": "Led Zeppelin",
             "genre": "Rock",
@@ -3494,8 +3503,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2615,
             "year": 1975
         }
-    ],
-    "Lootpack": [
+    ]],
+    ["Lootpack",  [
         {
             "artist": "Lootpack",
             "genre": "Hip-Hop",
@@ -3559,8 +3568,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1373,
             "year": 1998
         }
-    ],
-    "Love": [
+    ]],
+    ["Love",  [
         {
             "artist": "Love",
             "genre": "Psychedelic Rock",
@@ -3568,8 +3577,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2527,
             "year": 1967
         }
-    ],
-    "M. Geddes Gengras": [
+    ]],
+    ["M. Geddes Gengras",  [
         {
             "artist": "M. Geddes Gengras",
             "genre": "Electronic",
@@ -3577,8 +3586,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4726,
             "year": 2014
         }
-    ],
-    "M.E.D": [
+    ]],
+    ["M.E.D",  [
         {
             "artist": "M.E.D",
             "genre": "Hip-Hop",
@@ -3593,8 +3602,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 191,
             "year": 2005
         }
-    ],
-    "M.Nomized & I.Q.C.M": [
+    ]],
+    ["M.Nomized & I.Q.C.M",  [
         {
             "artist": "M.Nomized & I.Q.C.M",
             "genre": "Electronic Experimental",
@@ -3602,8 +3611,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3705,
             "year": 1994
         }
-    ],
-    "MED & Blu": [
+    ]],
+    ["MED & Blu",  [
         {
             "artist": "MED & Blu",
             "genre": "Hip-Hop",
@@ -3611,8 +3620,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1444,
             "year": 2013
         }
-    ],
-    "MED, Blu & Madlib": [
+    ]],
+    ["MED, Blu & Madlib",  [
         {
             "artist": "MED, Blu & Madlib",
             "genre": "Hip-Hop",
@@ -3627,8 +3636,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1826,
             "year": 2013
         }
-    ],
-    "MSTRKRFT": [
+    ]],
+    ["MSTRKRFT",  [
         {
             "artist": "MSTRKRFT",
             "genre": "Electronic",
@@ -3636,8 +3645,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 171,
             "year": 2009
         }
-    ],
-    "Mac Miller": [
+    ]],
+    ["Mac Miller",  [
         {
             "artist": "Mac Miller",
             "genre": "Hip-Hop",
@@ -3645,8 +3654,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 5204,
             "year": 2014
         }
-    ],
-    "Madlib": [
+    ]],
+    ["Madlib",  [
         {
             "artist": "Madlib",
             "genre": "Hip-Hop",
@@ -3997,8 +4006,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3839,
             "year": 2008
         }
-    ],
-    "Madlib & DOOM": [
+    ]],
+    ["Madlib & DOOM",  [
         {
             "artist": "Madlib & DOOM",
             "genre": "Hip-Hop",
@@ -4006,8 +4015,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 333,
             "year": 2016
         }
-    ],
-    "Madvillain": [
+    ]],
+    ["Madvillain",  [
         {
             "artist": "Madvillain",
             "genre": "Hip-Hop",
@@ -4036,8 +4045,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 104,
             "year": 2010
         }
-    ],
-    "Major Lazer": [
+    ]],
+    ["Major Lazer",  [
         {
             "artist": "Major Lazer",
             "genre": "Hip-Hop",
@@ -4073,8 +4082,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 253,
             "year": 2011
         }
-    ],
-    "Marianne Faithfull": [
+    ]],
+    ["Marianne Faithfull",  [
         {
             "artist": "Marianne Faithfull",
             "genre": "New Wave",
@@ -4082,8 +4091,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2257,
             "year": 1979
         }
-    ],
-    "Mark Ronson & The Business Intl": [
+    ]],
+    ["Mark Ronson & The Business Intl",  [
         {
             "artist": "Mark Ronson & The Business Intl",
             "genre": "Electronic",
@@ -4091,8 +4100,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2842,
             "year": 2010
         }
-    ],
-    "Martina Topley-Bird": [
+    ]],
+    ["Martina Topley-Bird",  [
         {
             "artist": "Martina Topley-Bird",
             "genre": "Electronic",
@@ -4100,8 +4109,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 768,
             "year": 2008
         }
-    ],
-    "Massive Attack": [
+    ]],
+    ["Massive Attack",  [
         {
             "artist": "Massive Attack",
             "genre": "Trip-Hop",
@@ -4116,8 +4125,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3831,
             "year": 1998
         }
-    ],
-    "Metal Fingers": [
+    ]],
+    ["Metal Fingers",  [
         {
             "artist": "Metal Fingers",
             "genre": "Hip-Hop",
@@ -4146,8 +4155,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2329,
             "year": 2006
         }
-    ],
-    "Mica Levi": [
+    ]],
+    ["Mica Levi",  [
         {
             "artist": "Mica Levi",
             "genre": "Electronic",
@@ -4155,8 +4164,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2813,
             "year": 2014
         }
-    ],
-    "Mica Levi & Oliver Coates": [
+    ]],
+    ["Mica Levi & Oliver Coates",  [
         {
             "artist": "Mica Levi & Oliver Coates",
             "genre": "Electronic",
@@ -4164,8 +4173,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1668,
             "year": 2016
         }
-    ],
-    "Micachu & The Shapes": [
+    ]],
+    ["Micachu & The Shapes",  [
         {
             "artist": "Micachu & The Shapes",
             "genre": "Electronic",
@@ -4194,8 +4203,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2103,
             "year": 2012
         }
-    ],
-    "Michael Bundt": [
+    ]],
+    ["Michael Bundt",  [
         {
             "artist": "Michael Bundt",
             "genre": "Electronic",
@@ -4210,8 +4219,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2615,
             "year": 1979
         }
-    ],
-    "Mincemeat Or Tenspeed": [
+    ]],
+    ["Mincemeat Or Tenspeed",  [
         {
             "artist": "Mincemeat Or Tenspeed",
             "genre": "Noise",
@@ -4219,8 +4228,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1737,
             "year": 2014
         }
-    ],
-    "Monk Hughes & The Outer Realm": [
+    ]],
+    ["Monk Hughes & The Outer Realm",  [
         {
             "artist": "Monk Hughes & The Outer Realm",
             "genre": "Jazz",
@@ -4228,8 +4237,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4412,
             "year": 2004
         }
-    ],
-    "Mono En Stereo": [
+    ]],
+    ["Mono En Stereo",  [
         {
             "artist": "Mono En Stereo",
             "genre": "Hip-Hop",
@@ -4328,8 +4337,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2531,
             "year": 2017
         }
-    ],
-    "Monotonix": [
+    ]],
+    ["Monotonix",  [
         {
             "artist": "Monotonix",
             "genre": "Garage Rock",
@@ -4344,8 +4353,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1805,
             "year": 2009
         }
-    ],
-    "Mos Def & Talib Kweli": [
+    ]],
+    ["Mos Def & Talib Kweli",  [
         {
             "artist": "Mos Def & Talib Kweli",
             "genre": "Hip-Hop",
@@ -4353,8 +4362,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3001,
             "year": 1998
         }
-    ],
-    "Moto\u0308rhead": [
+    ]],
+    ["Moto\u0308rhead",  [
         {
             "artist": "Moto\u0308rhead",
             "genre": "Heavy Metal",
@@ -4362,8 +4371,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 164,
             "year": 1980
         }
-    ],
-    "Mouth's Cradle": [
+    ]],
+    ["Mouth's Cradle",  [
         {
             "artist": "Mouth's Cradle",
             "genre": "Alternative",
@@ -4371,8 +4380,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2559,
             "year": 2008
         }
-    ],
-    "Mr. Bungle": [
+    ]],
+    ["Mr. Bungle",  [
         {
             "artist": "Mr. Bungle",
             "genre": "Avant-Garde",
@@ -4394,8 +4403,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4395,
             "year": 1991
         }
-    ],
-    "Mr. Lif": [
+    ]],
+    ["Mr. Lif",  [
         {
             "artist": "Mr. Lif",
             "genre": "Hip-Hop",
@@ -4410,8 +4419,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2442,
             "year": 2006
         }
-    ],
-    "Mr. Muthafuckin' eXquire": [
+    ]],
+    ["Mr. Muthafuckin' eXquire",  [
         {
             "artist": "Mr. Muthafuckin' eXquire",
             "genre": "Hip-Hop",
@@ -4419,8 +4428,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3270,
             "year": 2013
         }
-    ],
-    "Mr. Scruff": [
+    ]],
+    ["Mr. Scruff",  [
         {
             "artist": "Mr. Scruff",
             "genre": "Hip-Hop",
@@ -4428,8 +4437,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 246,
             "year": 1999
         }
-    ],
-    "Mungo Jerry": [
+    ]],
+    ["Mungo Jerry",  [
         {
             "artist": "Mungo Jerry",
             "genre": "Rock",
@@ -4437,8 +4446,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 168,
             "year": 1973
         }
-    ],
-    "Muse": [
+    ]],
+    ["Muse",  [
         {
             "artist": "Muse",
             "genre": "Alternative Rock",
@@ -4446,8 +4455,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 366,
             "year": 2006
         }
-    ],
-    "My Brother The Wind": [
+    ]],
+    ["My Brother The Wind",  [
         {
             "artist": "My Brother The Wind",
             "genre": "Psychedelic Rock",
@@ -4455,8 +4464,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3576,
             "year": 2010
         }
-    ],
-    "Nat King Cole": [
+    ]],
+    ["Nat King Cole",  [
         {
             "artist": "Nat King Cole",
             "genre": "Turntablist",
@@ -4464,8 +4473,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 163,
             "year": 2009
         }
-    ],
-    "Nirvana": [
+    ]],
+    ["Nirvana",  [
         {
             "artist": "Nirvana",
             "genre": "Grunge",
@@ -4515,8 +4524,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4465,
             "year": 2005
         }
-    ],
-    "Oh No": [
+    ]],
+    ["Oh No",  [
         {
             "artist": "Oh No",
             "genre": "Hip-Hop",
@@ -4524,8 +4533,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3448,
             "year": 2006
         }
-    ],
-    "Open Mike Eagle": [
+    ]],
+    ["Open Mike Eagle",  [
         {
             "artist": "Open Mike Eagle",
             "genre": "Hip-Hop",
@@ -4533,8 +4542,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2673,
             "year": 2014
         }
-    ],
-    "Otis Redding": [
+    ]],
+    ["Otis Redding",  [
         {
             "artist": "Otis Redding",
             "genre": "Soul",
@@ -4549,8 +4558,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3054,
             "year": 1965
         }
-    ],
-    "OutKast": [
+    ]],
+    ["OutKast",  [
         {
             "artist": "OutKast",
             "genre": "Hip-Hop",
@@ -4565,8 +4574,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4704,
             "year": 2003
         }
-    ],
-    "Overseer": [
+    ]],
+    ["Overseer",  [
         {
             "artist": "Overseer",
             "genre": "Electronic",
@@ -4574,8 +4583,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 894,
             "year": 2003
         }
-    ],
-    "Ozomatli": [
+    ]],
+    ["Ozomatli",  [
         {
             "artist": "Ozomatli",
             "genre": "Hip-Hop",
@@ -4583,8 +4592,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 702,
             "year": 1999
         }
-    ],
-    "PJ Harvey": [
+    ]],
+    ["PJ Harvey",  [
         {
             "artist": "PJ Harvey",
             "genre": "Alternative Rock",
@@ -4592,8 +4601,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2413,
             "year": 1992
         }
-    ],
-    "Pan Y Regaliz": [
+    ]],
+    ["Pan Y Regaliz",  [
         {
             "artist": "Pan Y Regaliz",
             "genre": "Progressive Rock",
@@ -4601,8 +4610,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2103,
             "year": 1971
         }
-    ],
-    "Parallel Thought": [
+    ]],
+    ["Parallel Thought",  [
         {
             "artist": "Parallel Thought",
             "genre": "Hip-Hop",
@@ -4610,8 +4619,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1254,
             "year": 2006
         }
-    ],
-    "Parquet Courts": [
+    ]],
+    ["Parquet Courts",  [
         {
             "artist": "Parquet Courts",
             "genre": "Rock",
@@ -4619,8 +4628,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2317,
             "year": 2018
         }
-    ],
-    "Paul White": [
+    ]],
+    ["Paul White",  [
         {
             "artist": "Paul White",
             "genre": "Hip-Hop",
@@ -4670,8 +4679,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1854,
             "year": 2013
         }
-    ],
-    "Pearls Before Swine": [
+    ]],
+    ["Pearls Before Swine",  [
         {
             "artist": "Pearls Before Swine",
             "genre": "Psychedelic Folk",
@@ -4679,8 +4688,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2140,
             "year": 1967
         }
-    ],
-    "Percee P": [
+    ]],
+    ["Percee P",  [
         {
             "artist": "Percee P",
             "genre": "Hip-Hop",
@@ -4695,8 +4704,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2486,
             "year": 2008
         }
-    ],
-    "Phreeze Phrame": [
+    ]],
+    ["Phreeze Phrame",  [
         {
             "artist": "Phreeze Phrame",
             "genre": "Hip-Hop",
@@ -4704,8 +4713,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2513,
             "year": 2011
         }
-    ],
-    "Pink Floyd": [
+    ]],
+    ["Pink Floyd",  [
         {
             "artist": "Pink Floyd",
             "genre": "Psychedelic Rock",
@@ -4734,8 +4743,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2646,
             "year": 1975
         }
-    ],
-    "Pixies": [
+    ]],
+    ["Pixies",  [
         {
             "artist": "Pixies",
             "genre": "Rock",
@@ -4778,8 +4787,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2340,
             "year": 1991
         }
-    ],
-    "Planet Asia & Madlib": [
+    ]],
+    ["Planet Asia & Madlib",  [
         {
             "artist": "Planet Asia & Madlib",
             "genre": "Hip-Hop",
@@ -4787,8 +4796,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 834,
             "year": 2011
         }
-    ],
-    "Police,The": [
+    ]],
+    ["Police,The",  [
         {
             "artist": "Police,The",
             "genre": "Rock",
@@ -4796,8 +4805,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4705,
             "year": 1997
         }
-    ],
-    "Porcupine Tree": [
+    ]],
+    ["Porcupine Tree",  [
         {
             "artist": "Porcupine Tree",
             "genre": "Progressive Rock",
@@ -4805,8 +4814,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4358,
             "year": 2005
         }
-    ],
-    "Portishead": [
+    ]],
+    ["Portishead",  [
         {
             "artist": "Portishead",
             "genre": "Trip-Hop",
@@ -4814,8 +4823,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2958,
             "year": 1994
         }
-    ],
-    "Prefuse 73": [
+    ]],
+    ["Prefuse 73",  [
         {
             "artist": "Prefuse 73",
             "genre": "Glitch",
@@ -4907,8 +4916,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3024,
             "year": 2001
         }
-    ],
-    "Prefuse 73 & The Flaming Lips": [
+    ]],
+    ["Prefuse 73 & The Flaming Lips",  [
         {
             "artist": "Prefuse 73 & The Flaming Lips",
             "genre": "Psychedelic Glitch",
@@ -4916,8 +4925,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1074,
             "year": 2011
         }
-    ],
-    "Pressure": [
+    ]],
+    ["Pressure",  [
         {
             "artist": "Pressure",
             "genre": "Dubstep",
@@ -4925,8 +4934,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 230,
             "year": 2005
         }
-    ],
-    "Prof & DOOM": [
+    ]],
+    ["Prof & DOOM",  [
         {
             "artist": "Prof & DOOM",
             "genre": "Hip-Hop",
@@ -4934,8 +4943,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1299,
             "year": 2002
         }
-    ],
-    "Quasimoto": [
+    ]],
+    ["Quasimoto",  [
         {
             "artist": "Quasimoto",
             "genre": "Hip-Hop",
@@ -5034,8 +5043,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1972,
             "year": 2013
         }
-    ],
-    "Quicksilver Messenger Service": [
+    ]],
+    ["Quicksilver Messenger Service",  [
         {
             "artist": "Quicksilver Messenger Service",
             "genre": "Psychedelic Rock",
@@ -5043,8 +5052,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1917,
             "year": 1968
         }
-    ],
-    "RJD2": [
+    ]],
+    ["RJD2",  [
         {
             "artist": "RJD2",
             "genre": "Hip-Hop",
@@ -5059,8 +5068,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 221,
             "year": 2006
         }
-    ],
-    "RTNC": [
+    ]],
+    ["RTNC",  [
         {
             "artist": "RTNC",
             "genre": "Hip-Hop",
@@ -5278,8 +5287,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3477,
             "year": 2015
         }
-    ],
-    "Radian": [
+    ]],
+    ["Radian",  [
         {
             "artist": "Radian",
             "genre": "Electronica",
@@ -5287,8 +5296,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1823,
             "year": 1998
         }
-    ],
-    "Radiohead": [
+    ]],
+    ["Radiohead",  [
         {
             "artist": "Radiohead",
             "genre": "Alternative Rock",
@@ -5303,8 +5312,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 6839,
             "year": 1997
         }
-    ],
-    "Rare Bird": [
+    ]],
+    ["Rare Bird",  [
         {
             "artist": "Rare Bird",
             "genre": "Progressive Rock",
@@ -5326,8 +5335,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 323,
             "year": 1969
         }
-    ],
-    "Ratking": [
+    ]],
+    ["Ratking",  [
         {
             "artist": "Ratking",
             "genre": "Hip-Hop",
@@ -5349,8 +5358,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2843,
             "year": 2014
         }
-    ],
-    "Robert Fripp": [
+    ]],
+    ["Robert Fripp",  [
         {
             "artist": "Robert Fripp",
             "genre": "Electronic",
@@ -5358,8 +5367,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2895,
             "year": 1980
         }
-    ],
-    "Roll Deep": [
+    ]],
+    ["Roll Deep",  [
         {
             "artist": "Roll Deep",
             "genre": "Grime",
@@ -5367,8 +5376,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3653,
             "year": 2007
         }
-    ],
-    "Roots Manuva": [
+    ]],
+    ["Roots Manuva",  [
         {
             "artist": "Roots Manuva",
             "genre": "Hip-Hop",
@@ -5376,8 +5385,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3897,
             "year": 1999
         }
-    ],
-    "Run The Jewels": [
+    ]],
+    ["Run The Jewels",  [
         {
             "artist": "Run The Jewels",
             "genre": "Hip-Hop",
@@ -5413,8 +5422,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3087,
             "year": 2016
         }
-    ],
-    "S.T. Mikael": [
+    ]],
+    ["S.T. Mikael",  [
         {
             "artist": "S.T. Mikael",
             "genre": "Psychedelic Rock",
@@ -5422,8 +5431,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2905,
             "year": 1989
         }
-    ],
-    "SGX": [
+    ]],
+    ["SGX",  [
         {
             "artist": "SGX",
             "genre": "Electronic",
@@ -5431,8 +5440,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 278,
             "year": 2011
         }
-    ],
-    "SRC": [
+    ]],
+    ["SRC",  [
         {
             "artist": "SRC",
             "genre": "Psychedelic Rock",
@@ -5482,8 +5491,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 196,
             "year": 1970
         }
-    ],
-    "Schoolboy Q": [
+    ]],
+    ["Schoolboy Q",  [
         {
             "artist": "Schoolboy Q",
             "genre": "Hip-Hop",
@@ -5491,8 +5500,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4063,
             "year": 2012
         }
-    ],
-    "Shabazz Palaces": [
+    ]],
+    ["Shabazz Palaces",  [
         {
             "artist": "Shabazz Palaces",
             "genre": "Hip-Hop",
@@ -5521,8 +5530,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1378,
             "year": 2009
         }
-    ],
-    "Siouxsie & The Banshees": [
+    ]],
+    ["Siouxsie & The Banshees",  [
         {
             "artist": "Siouxsie & The Banshees",
             "genre": "New Wave",
@@ -5537,8 +5546,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2713,
             "year": 1978
         }
-    ],
-    "Siriusmo": [
+    ]],
+    ["Siriusmo",  [
         {
             "artist": "Siriusmo",
             "genre": "Electronic",
@@ -5546,8 +5555,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1635,
             "year": 2008
         }
-    ],
-    "Skyhooks": [
+    ]],
+    ["Skyhooks",  [
         {
             "artist": "Skyhooks",
             "genre": "Rock",
@@ -5555,8 +5564,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2749,
             "year": 1974
         }
-    ],
-    "Sleepy Sun": [
+    ]],
+    ["Sleepy Sun",  [
         {
             "artist": "Sleepy Sun",
             "genre": "Psychedelic Rock",
@@ -5571,8 +5580,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2537,
             "year": 2010
         }
-    ],
-    "Slick Rick": [
+    ]],
+    ["Slick Rick",  [
         {
             "artist": "Slick Rick",
             "genre": "Hip-Hop",
@@ -5580,8 +5589,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3015,
             "year": 1988
         }
-    ],
-    "Spacemonkeyz Vs. Gorillaz": [
+    ]],
+    ["Spacemonkeyz Vs. Gorillaz",  [
         {
             "artist": "Spacemonkeyz Vs. Gorillaz",
             "genre": "Electronic",
@@ -5589,8 +5598,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4169,
             "year": 2002
         }
-    ],
-    "Squarepusher": [
+    ]],
+    ["Squarepusher",  [
         {
             "artist": "Squarepusher",
             "genre": "Electronica",
@@ -5605,8 +5614,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3747,
             "year": 1997
         }
-    ],
-    "Stephen David Heitkotter": [
+    ]],
+    ["Stephen David Heitkotter",  [
         {
             "artist": "Stephen David Heitkotter",
             "genre": "Other",
@@ -5614,8 +5623,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4173,
             "year": 2014
         }
-    ],
-    "Stereolab": [
+    ]],
+    ["Stereolab",  [
         {
             "artist": "Stereolab",
             "genre": "Post Rock",
@@ -5742,8 +5751,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3731,
             "year": 1993
         }
-    ],
-    "Stevie Wonder": [
+    ]],
+    ["Stevie Wonder",  [
         {
             "artist": "Stevie Wonder",
             "genre": "Soul",
@@ -5751,8 +5760,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2651,
             "year": 1973
         }
-    ],
-    "Strong Arm Steady": [
+    ]],
+    ["Strong Arm Steady",  [
         {
             "artist": "Strong Arm Steady",
             "genre": "Hip-Hop",
@@ -5760,8 +5769,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3053,
             "year": 2010
         }
-    ],
-    "Sturgill Simpson": [
+    ]],
+    ["Sturgill Simpson",  [
         {
             "artist": "Sturgill Simpson",
             "genre": "Country",
@@ -5769,8 +5778,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2066,
             "year": 2014
         }
-    ],
-    "Superbad Solace": [
+    ]],
+    ["Superbad Solace",  [
         {
             "artist": "Superbad Solace",
             "genre": "Hip-Hop",
@@ -5778,8 +5787,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1203,
             "year": 2018
         }
-    ],
-    "Supertramp": [
+    ]],
+    ["Supertramp",  [
         {
             "artist": "Supertramp",
             "genre": "Progressive Rock",
@@ -5787,8 +5796,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2620,
             "year": 1977
         }
-    ],
-    "Swans": [
+    ]],
+    ["Swans",  [
         {
             "artist": "Swans",
             "genre": "Post-Rock",
@@ -5810,8 +5819,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 7272,
             "year": 2014
         }
-    ],
-    "Syrinx": [
+    ]],
+    ["Syrinx",  [
         {
             "artist": "Syrinx",
             "genre": "Progressive Rock",
@@ -5833,8 +5842,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2344,
             "year": 1970
         }
-    ],
-    "T Rex": [
+    ]],
+    ["T Rex",  [
         {
             "artist": "T Rex",
             "genre": "Glam Rock",
@@ -5849,8 +5858,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2640,
             "year": 1972
         }
-    ],
-    "Talib Kweli & Madlib": [
+    ]],
+    ["Talib Kweli & Madlib",  [
         {
             "artist": "Talib Kweli & Madlib",
             "genre": "Hip-Hop",
@@ -5858,8 +5867,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1812,
             "year": 2007
         }
-    ],
-    "Tame Impala": [
+    ]],
+    ["Tame Impala",  [
         {
             "artist": "Tame Impala",
             "genre": "Rock",
@@ -5881,8 +5890,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3107,
             "year": 2012
         }
-    ],
-    "Teddybears": [
+    ]],
+    ["Teddybears",  [
         {
             "artist": "Teddybears",
             "genre": "Reggae Fusion",
@@ -5890,8 +5899,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 179,
             "year": 2004
         }
-    ],
-    "The Avalanches,": [
+    ]],
+    ["The Avalanches,",  [
         {
             "artist": "The Avalanches,",
             "genre": "Electronic",
@@ -5913,8 +5922,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 268,
             "year": 2016
         }
-    ],
-    "The Beatles,": [
+    ]],
+    ["The Beatles,",  [
         {
             "artist": "The Beatles,",
             "genre": "Pop Rock",
@@ -6062,8 +6071,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1642,
             "year": 1966
         }
-    ],
-    "The Black Angels,": [
+    ]],
+    ["The Black Angels,",  [
         {
             "artist": "The Black Angels,",
             "genre": "Rock",
@@ -6078,8 +6087,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3523,
             "year": 2006
         }
-    ],
-    "The Books,": [
+    ]],
+    ["The Books,",  [
         {
             "artist": "The Books,",
             "genre": "Acoustic Electronica",
@@ -6087,8 +6096,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2311,
             "year": 2002
         }
-    ],
-    "The Breeders,": [
+    ]],
+    ["The Breeders,",  [
         {
             "artist": "The Breeders,",
             "genre": "Rock",
@@ -6096,8 +6105,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2378,
             "year": 1993
         }
-    ],
-    "The Bug,": [
+    ]],
+    ["The Bug,",  [
         {
             "artist": "The Bug,",
             "genre": "Electronic",
@@ -6168,8 +6177,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4023,
             "year": 1997
         }
-    ],
-    "The Byrds,": [
+    ]],
+    ["The Byrds,",  [
         {
             "artist": "The Byrds,",
             "genre": "Psychedelic Rock",
@@ -6198,8 +6207,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 830,
             "year": 1965
         }
-    ],
-    "The Chemical Brothers,": [
+    ]],
+    ["The Chemical Brothers,",  [
         {
             "artist": "The Chemical Brothers,",
             "genre": "Electronic",
@@ -6228,8 +6237,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3591,
             "year": 2007
         }
-    ],
-    "The Clash,": [
+    ]],
+    ["The Clash,",  [
         {
             "artist": "The Clash,",
             "genre": "Rock",
@@ -6237,8 +6246,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3943,
             "year": 1979
         }
-    ],
-    "The Dead Weather,": [
+    ]],
+    ["The Dead Weather,",  [
         {
             "artist": "The Dead Weather,",
             "genre": "Rock",
@@ -6253,8 +6262,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2109,
             "year": 2010
         }
-    ],
-    "The Doors,": [
+    ]],
+    ["The Doors,",  [
         {
             "artist": "The Doors,",
             "genre": "Psychedelic Rock",
@@ -6262,8 +6271,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2667,
             "year": 1967
         }
-    ],
-    "The Du-Rites,": [
+    ]],
+    ["The Du-Rites,",  [
         {
             "artist": "The Du-Rites,",
             "genre": "Funk",
@@ -6271,8 +6280,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1927,
             "year": 2016
         }
-    ],
-    "The Grateful Dead,": [
+    ]],
+    ["The Grateful Dead,",  [
         {
             "artist": "The Grateful Dead,",
             "genre": "Rock",
@@ -6287,8 +6296,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2453,
             "year": 1967
         }
-    ],
-    "The Herbaliser,": [
+    ]],
+    ["The Herbaliser,",  [
         {
             "artist": "The Herbaliser,",
             "genre": "Hip-Hop",
@@ -6317,8 +6326,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1034,
             "year": 2005
         }
-    ],
-    "The Hives,": [
+    ]],
+    ["The Hives,",  [
         {
             "artist": "The Hives,",
             "genre": "Punk Rock",
@@ -6347,8 +6356,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1675,
             "year": 2000
         }
-    ],
-    "The Incredible String Band,": [
+    ]],
+    ["The Incredible String Band,",  [
         {
             "artist": "The Incredible String Band,",
             "genre": "Folk Rock",
@@ -6356,8 +6365,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2718,
             "year": 1966
         }
-    ],
-    "The Jimi Hendrix Experience,": [
+    ]],
+    ["The Jimi Hendrix Experience,",  [
         {
             "artist": "The Jimi Hendrix Experience,",
             "genre": "Experimental Rock",
@@ -6365,8 +6374,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4518,
             "year": 1968
         }
-    ],
-    "The Kills,": [
+    ]],
+    ["The Kills,",  [
         {
             "artist": "The Kills,",
             "genre": "Rock",
@@ -6395,8 +6404,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2401,
             "year": 2005
         }
-    ],
-    "The Lonely Island,": [
+    ]],
+    ["The Lonely Island,",  [
         {
             "artist": "The Lonely Island,",
             "genre": "Hip-Hop",
@@ -6404,8 +6413,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2530,
             "year": 2009
         }
-    ],
-    "The National,": [
+    ]],
+    ["The National,",  [
         {
             "artist": "The National,",
             "genre": "Alternative Rock",
@@ -6413,8 +6422,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2854,
             "year": 2010
         }
-    ],
-    "The New Mastersounds,": [
+    ]],
+    ["The New Mastersounds,",  [
         {
             "artist": "The New Mastersounds,",
             "genre": "Funk",
@@ -6422,8 +6431,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 311,
             "year": 2007
         }
-    ],
-    "The Orkustra,": [
+    ]],
+    ["The Orkustra,",  [
         {
             "artist": "The Orkustra,",
             "genre": "Psychedelic Rock",
@@ -6431,8 +6440,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4952,
             "year": 2009
         }
-    ],
-    "The Peanut Butter Conspiracy,": [
+    ]],
+    ["The Peanut Butter Conspiracy,",  [
         {
             "artist": "The Peanut Butter Conspiracy,",
             "genre": "Psychedelic Rock",
@@ -6440,8 +6449,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1845,
             "year": 1967
         }
-    ],
-    "The Presets,": [
+    ]],
+    ["The Presets,",  [
         {
             "artist": "The Presets,",
             "genre": "Electronic",
@@ -6463,8 +6472,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1647,
             "year": 2004
         }
-    ],
-    "The Pretty Things,": [
+    ]],
+    ["The Pretty Things,",  [
         {
             "artist": "The Pretty Things,",
             "genre": "Rock",
@@ -6486,8 +6495,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2447,
             "year": 1968
         }
-    ],
-    "The Raconteurs,": [
+    ]],
+    ["The Raconteurs,",  [
         {
             "artist": "The Raconteurs,",
             "genre": "Rock",
@@ -6502,8 +6511,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3327,
             "year": 2008
         }
-    ],
-    "The Red Krayola,": [
+    ]],
+    ["The Red Krayola,",  [
         {
             "artist": "The Red Krayola,",
             "genre": "Experimental Rock",
@@ -6511,8 +6520,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2616,
             "year": 1967
         }
-    ],
-    "The Sex Pistols,": [
+    ]],
+    ["The Sex Pistols,",  [
         {
             "artist": "The Sex Pistols,",
             "genre": "Punk Rock",
@@ -6520,8 +6529,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2320,
             "year": 1977
         }
-    ],
-    "The Slits,": [
+    ]],
+    ["The Slits,",  [
         {
             "artist": "The Slits,",
             "genre": "Post-Punk",
@@ -6543,8 +6552,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2338,
             "year": 1981
         }
-    ],
-    "The Stooges,": [
+    ]],
+    ["The Stooges,",  [
         {
             "artist": "The Stooges,",
             "genre": "Rock",
@@ -6559,8 +6568,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2071,
             "year": 1969
         }
-    ],
-    "The Strokes,": [
+    ]],
+    ["The Strokes,",  [
         {
             "artist": "The Strokes,",
             "genre": "Rock",
@@ -6568,8 +6577,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2184,
             "year": 2001
         }
-    ],
-    "The Three Seas,": [
+    ]],
+    ["The Three Seas,",  [
         {
             "artist": "The Three Seas,",
             "genre": "Jazz",
@@ -6577,8 +6586,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2469,
             "year": 2014
         }
-    ],
-    "The United States Of America,": [
+    ]],
+    ["The United States Of America,",  [
         {
             "artist": "The United States Of America,",
             "genre": "Psychedelic Rock",
@@ -6586,8 +6595,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4012,
             "year": 1968
         }
-    ],
-    "The White Stripes,": [
+    ]],
+    ["The White Stripes,",  [
         {
             "artist": "The White Stripes,",
             "genre": "Rock",
@@ -6637,8 +6646,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2423,
             "year": 2001
         }
-    ],
-    "The Whitefield Brothers,": [
+    ]],
+    ["The Whitefield Brothers,",  [
         {
             "artist": "The Whitefield Brothers,",
             "genre": "Afrobeat",
@@ -6653,8 +6662,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2691,
             "year": 2002
         }
-    ],
-    "The Who,": [
+    ]],
+    ["The Who,",  [
         {
             "artist": "The Who,",
             "genre": "Rock",
@@ -6669,8 +6678,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4475,
             "year": 1969
         }
-    ],
-    "The Zombies,": [
+    ]],
+    ["The Zombies,",  [
         {
             "artist": "The Zombies,",
             "genre": "Psychedelic Rock",
@@ -6692,8 +6701,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 936,
             "year": 1968
         }
-    ],
-    "Them Crooked Vultures": [
+    ]],
+    ["Them Crooked Vultures",  [
         {
             "artist": "Them Crooked Vultures",
             "genre": "Rock",
@@ -6701,8 +6710,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3971,
             "year": 2009
         }
-    ],
-    "Thievery Corporation": [
+    ]],
+    ["Thievery Corporation",  [
         {
             "artist": "Thievery Corporation",
             "genre": "Lounge",
@@ -6710,8 +6719,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3354,
             "year": 2008
         }
-    ],
-    "Throbbing Gristle": [
+    ]],
+    ["Throbbing Gristle",  [
         {
             "artist": "Throbbing Gristle",
             "genre": "Industrial",
@@ -6719,8 +6728,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2861,
             "year": 1977
         }
-    ],
-    "Thundercat": [
+    ]],
+    ["Thundercat",  [
         {
             "artist": "Thundercat",
             "genre": "Jazz Fusion",
@@ -6728,8 +6737,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2399,
             "year": 2013
         }
-    ],
-    "Time Machine Modulus": [
+    ]],
+    ["Time Machine Modulus",  [
         {
             "artist": "Time Machine Modulus",
             "genre": "Math Rock",
@@ -6744,8 +6753,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1748,
             "year": 2012
         }
-    ],
-    "Toddla T": [
+    ]],
+    ["Toddla T",  [
         {
             "artist": "Toddla T",
             "genre": "Electronic",
@@ -6753,8 +6762,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2451,
             "year": 2011
         }
-    ],
-    "Tonikom": [
+    ]],
+    ["Tonikom",  [
         {
             "artist": "Tonikom",
             "genre": "Breakbeat",
@@ -6762,8 +6771,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3805,
             "year": 2007
         }
-    ],
-    "Toro Y Moi": [
+    ]],
+    ["Toro Y Moi",  [
         {
             "artist": "Toro Y Moi",
             "genre": "Electronica",
@@ -6771,8 +6780,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1977,
             "year": 2010
         }
-    ],
-    "Toy Selectah": [
+    ]],
+    ["Toy Selectah",  [
         {
             "artist": "Toy Selectah",
             "genre": "Electronic",
@@ -6780,8 +6789,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1810,
             "year": 2011
         }
-    ],
-    "Tricky": [
+    ]],
+    ["Tricky",  [
         {
             "artist": "Tricky",
             "genre": "Hip-Hop",
@@ -6796,8 +6805,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3428,
             "year": 1995
         }
-    ],
-    "Trouble Knows Me": [
+    ]],
+    ["Trouble Knows Me",  [
         {
             "artist": "Trouble Knows Me",
             "genre": "Hip-Hop",
@@ -6812,8 +6821,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 676,
             "year": 2015
         }
-    ],
-    "Turbotito": [
+    ]],
+    ["Turbotito",  [
         {
             "artist": "Turbotito",
             "genre": "House",
@@ -6821,8 +6830,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 131,
             "year": 2007
         }
-    ],
-    "Two Fingers": [
+    ]],
+    ["Two Fingers",  [
         {
             "artist": "Two Fingers",
             "genre": "Electronica",
@@ -6851,8 +6860,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2377,
             "year": 2009
         }
-    ],
-    "Ty Segall & White Fence": [
+    ]],
+    ["Ty Segall & White Fence",  [
         {
             "artist": "Ty Segall & White Fence",
             "genre": "Psychedelic Rock",
@@ -6860,8 +6869,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1737,
             "year": 2012
         }
-    ],
-    "Tyler, The Creator": [
+    ]],
+    ["Tyler, The Creator",  [
         {
             "artist": "Tyler, The Creator",
             "genre": "Hip-Hop",
@@ -6869,8 +6878,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4429,
             "year": 2011
         }
-    ],
-    "Tyondai Braxton": [
+    ]],
+    ["Tyondai Braxton",  [
         {
             "artist": "Tyondai Braxton",
             "genre": "Experimental",
@@ -6885,8 +6894,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3588,
             "year": 2002
         }
-    ],
-    "UNKLE": [
+    ]],
+    ["UNKLE",  [
         {
             "artist": "UNKLE",
             "genre": "Electronic",
@@ -6936,8 +6945,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 7270,
             "year": 2010
         }
-    ],
-    "Ugly Frank": [
+    ]],
+    ["Ugly Frank",  [
         {
             "artist": "Ugly Frank",
             "genre": "Hip-Hop",
@@ -6945,8 +6954,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1678,
             "year": 2014
         }
-    ],
-    "Van Der Graaf Generator": [
+    ]],
+    ["Van Der Graaf Generator",  [
         {
             "artist": "Van Der Graaf Generator",
             "genre": "Progressive Rock",
@@ -6954,8 +6963,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2835,
             "year": 1970
         }
-    ],
-    "Velvet Underground & Nico": [
+    ]],
+    ["Velvet Underground & Nico",  [
         {
             "artist": "Velvet Underground & Nico",
             "genre": "Psychedelic Rock",
@@ -6970,8 +6979,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 359,
             "year": 1967
         }
-    ],
-    "Viktor Vaughn": [
+    ]],
+    ["Viktor Vaughn",  [
         {
             "artist": "Viktor Vaughn",
             "genre": "Hip-Hop",
@@ -6986,8 +6995,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1973,
             "year": 2004
         }
-    ],
-    "Vince Staples": [
+    ]],
+    ["Vince Staples",  [
         {
             "artist": "Vince Staples",
             "genre": "Hip-Hop",
@@ -6995,8 +7004,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1407,
             "year": 2014
         }
-    ],
-    "White Hills": [
+    ]],
+    ["White Hills",  [
         {
             "artist": "White Hills",
             "genre": "Psychedelic Rock",
@@ -7004,8 +7013,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3548,
             "year": 2010
         }
-    ],
-    "Whitey": [
+    ]],
+    ["Whitey",  [
         {
             "artist": "Whitey",
             "genre": "Electronica",
@@ -7020,8 +7029,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 236,
             "year": 2006
         }
-    ],
-    "Wiki": [
+    ]],
+    ["Wiki",  [
         {
             "artist": "Wiki",
             "genre": "Hip-Hop",
@@ -7029,8 +7038,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2392,
             "year": 2019
         }
-    ],
-    "Wiki And Your Old Droog": [
+    ]],
+    ["Wiki And Your Old Droog",  [
         {
             "artist": "Wiki And Your Old Droog",
             "genre": "Hip-Hop",
@@ -7038,8 +7047,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 1266,
             "year": 2017
         }
-    ],
-    "Wildchild": [
+    ]],
+    ["Wildchild",  [
         {
             "artist": "Wildchild",
             "genre": "Hip-Hop",
@@ -7054,8 +7063,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3606,
             "year": 2003
         }
-    ],
-    "Wiley": [
+    ]],
+    ["Wiley",  [
         {
             "artist": "Wiley",
             "genre": "Electronic",
@@ -7063,8 +7072,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 173,
             "year": 2008
         }
-    ],
-    "Willie Evans Jr": [
+    ]],
+    ["Willie Evans Jr",  [
         {
             "artist": "Willie Evans Jr",
             "genre": "Hip-Hop",
@@ -7079,8 +7088,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2123,
             "year": 2011
         }
-    ],
-    "Willie Isz": [
+    ]],
+    ["Willie Isz",  [
         {
             "artist": "Willie Isz",
             "genre": "Hip-Hop",
@@ -7088,8 +7097,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2784,
             "year": 2009
         }
-    ],
-    "Wooden Shjips": [
+    ]],
+    ["Wooden Shjips",  [
         {
             "artist": "Wooden Shjips",
             "genre": "Psychedelic Rock",
@@ -7118,8 +7127,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 2000,
             "year": 2007
         }
-    ],
-    "Wu-Tang Clan": [
+    ]],
+    ["Wu-Tang Clan",  [
         {
             "artist": "Wu-Tang Clan",
             "genre": "Hip-Hop",
@@ -7162,8 +7171,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4634,
             "year": 1997
         }
-    ],
-    "Yesterdays New Quintet": [
+    ]],
+    ["Yesterdays New Quintet",  [
         {
             "artist": "Yesterdays New Quintet",
             "genre": "Jazz",
@@ -7171,8 +7180,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4026,
             "year": 2001
         }
-    ],
-    "Your Old Droog": [
+    ]],
+    ["Your Old Droog",  [
         {
             "artist": "Your Old Droog",
             "genre": "Hip-Hop",
@@ -7229,8 +7238,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 3578,
             "year": 2014
         }
-    ],
-    "Your Old Droog & Edan": [
+    ]],
+    ["Your Old Droog & Edan",  [
         {
             "artist": "Your Old Droog & Edan",
             "genre": "Hip-Hop",
@@ -7238,8 +7247,8 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 355,
             "year": 2019
         }
-    ],
-    "_Compilations": [
+    ]],
+    ["_Compilations",  [
         {
             "artist": "_Compilations",
             "genre": "Progressive Rock",
@@ -7576,6 +7585,7 @@ export function albumsByArtist() {
             "totalDurationInSeconds": 4659,
             "year": 2000
         }
-    ]
+    ]],
+])
 }
-};
+

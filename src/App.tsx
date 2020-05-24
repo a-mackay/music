@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {albumsByArtist} from './Albums';
+import {Album, albumsByArtist} from './Albums';
+
+const MIN_FONT_SIZE = 1; // 1em
+const MAX_FONT_SIZE = 15; // 15em
 
 function App() {
     return (
@@ -21,17 +24,74 @@ function App() {
                 </a>
             </header>
             <VerticalBarChart yearAndMinsArray={yearAndMinsArray()} />
+            <Artists artistAndMinsArray={artistAndMinsArray()} />
         </div>
     );
+}
+
+interface ArtistsProps {
+    artistAndMinsArray: Array<ArtistAndMins>;
+}
+
+function Artists({artistAndMinsArray}: ArtistsProps) {
+    const maxMins = artistAndMinsArray
+        .map(({totalMinutes}) => totalMinutes)
+        .reduce((a, b) => Math.max(a, b));
+
+    return <div>
+        {artistAndMinsArray.map(({artist, totalMinutes}) => {
+            const fontSize = (totalMinutes / maxMins) * (MAX_FONT_SIZE - MIN_FONT_SIZE) + MIN_FONT_SIZE;
+            const fontSizeEm = fontSize.toFixed(3) + "em";
+            return <div style={{fontSize: fontSizeEm}}>{artist}</div>
+        })}
+    </div>
+}
+
+interface ArtistAndMins {
+    artist: string;
+    totalMinutes: number;
+}
+
+function artistAndMinsArray(): Array<ArtistAndMins> {
+    const artistAndMins = Array.from(albumsByArtist().entries()).map(entry => {
+        const artist = entry[0];
+        const albums = entry[1];
+        const totalSecs = albums
+            .map(album => album.totalDurationInSeconds)
+            .reduce((a, b) => a + b);
+        const totalMinutes = secondsToMinutes(totalSecs);
+        return {
+            artist,
+            totalMinutes,
+        }
+    });
+
+    const compareByArtist = (a: ArtistAndMins, b: ArtistAndMins) => {
+        if (a.artist < b.artist) {
+            return -1;
+        } else if (a.artist > b.artist) {
+            return 1;
+        } else {
+            return 0;
+        }
+    };
+
+    artistAndMins.sort(compareByArtist);
+
+    return artistAndMins;
 }
 
 interface YearAndMins {
   year: number;
   totalMinutes: number;
-};
+}
+
+function secondsToMinutes(seconds: number): number {
+    return Math.round(seconds / 60);
+}
 
 function yearAndMinsArray(): Array<YearAndMins> {
-    const albums = Object.values(albumsByArtist()).flatMap(albumList => albumList);
+    const albums = Array.from(albumsByArtist().entries()).flatMap(entry => entry[1]);
     const yearToTotalSeconds: Map<number, number> = new Map();
     for (const album of albums) {
         const year = album.year;
@@ -44,7 +104,7 @@ function yearAndMinsArray(): Array<YearAndMins> {
 
     const minsPerYear = Array.from(yearToTotalSeconds.entries()).map(entry => ({
       year: entry[0],
-      totalMinutes: Math.round(entry[1] / 60),
+      totalMinutes: secondsToMinutes(entry[1]),
     }));
 
     const compareByYear = (a: YearAndMins, b: YearAndMins) => {
@@ -123,31 +183,3 @@ function VerticalBarItem({label, percentage}: VerticalBarItemProps) {
 }
 
 export default App;
-
-
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
