@@ -2,8 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Album, albumsByArtist} from './Albums';
+import favoriteArtists from './FavoriteArtists';
 
 const MIN_FONT_SIZE = 1; // 1em
+const MID_FONT_SIZE = 3; //2em
 const MAX_FONT_SIZE = 15; // 15em
 
 function App() {
@@ -38,9 +40,18 @@ function Artists({artistAndMinsArray}: ArtistsProps) {
         .map(({totalMinutes}) => totalMinutes)
         .reduce((a, b) => Math.max(a, b));
 
+    const favArtists = favoriteArtists();
+
     return <div>
         {artistAndMinsArray.map(({artist, totalMinutes}) => {
-            const fontSize = (totalMinutes / maxMins) * (MAX_FONT_SIZE - MIN_FONT_SIZE) + MIN_FONT_SIZE;
+            let maxFontSize = MID_FONT_SIZE;
+            let minFontSize = MIN_FONT_SIZE;
+            if (favArtists.has(artist)) {
+                maxFontSize = MAX_FONT_SIZE;
+                minFontSize = MID_FONT_SIZE;
+            }
+
+            const fontSize = ((totalMinutes / maxMins) * (maxFontSize - minFontSize)) + minFontSize;
             const fontSizeEm = fontSize.toFixed(3) + "em";
             return <div style={{fontSize: fontSizeEm}}>{artist}</div>
         })}
