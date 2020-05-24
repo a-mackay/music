@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {albumsByArtist} from './Albums.js';
+import {albumsByArtist} from './Albums';
 
 function App() {
     return (
@@ -20,34 +20,34 @@ function App() {
                     Learn React
                 </a>
             </header>
-            <VerticalBarChart minsPerYear={minutesPerYear()} />
+            <VerticalBarChart yearAndMinsArray={yearAndMinsArray()} />
         </div>
     );
 }
 
-function minutesPerYear() {
+interface YearAndMins {
+  year: number;
+  totalMinutes: number;
+};
+
+function yearAndMinsArray(): Array<YearAndMins> {
     const albums = Object.values(albumsByArtist()).flatMap(albumList => albumList);
-    const secsPerYear = {};
+    const yearToTotalSeconds: Map<number, number> = new Map();
     for (const album of albums) {
         const year = album.year;
-        const secs = album.totalDurationInSeconds;
-        const currentTotalSecs = secsPerYear[year];
-        if (currentTotalSecs === undefined) {
-            secsPerYear[year] = secs;
-        } else {
-            secsPerYear[year] = currentTotalSecs + secs;
-        };
+        const albumSecs = album.totalDurationInSeconds;
+
+        let totalSecs = yearToTotalSeconds.get(year);
+        totalSecs = (totalSecs === undefined) ? 0 : totalSecs;
+        yearToTotalSeconds.set(year, totalSecs + albumSecs);
     };
 
-    const minsPerYear = [];
-    for (const [year, totalSecs] of Object.entries(secsPerYear)) {
-        minsPerYear.push({
-            year: year,
-            totalMinutes: Math.round(totalSecs / 60),
-        });
-    };
+    const minsPerYear = Array.from(yearToTotalSeconds.entries()).map(entry => ({
+      year: entry[0],
+      totalMinutes: Math.round(entry[1] / 60),
+    }));
 
-    const compareByYear = (a, b) => {
+    const compareByYear = (a: YearAndMins, b: YearAndMins) => {
         if (a.year < b.year) {
             return -1;
         } else if (a.year > b.year) {
@@ -61,15 +61,19 @@ function minutesPerYear() {
     return minsPerYear;
 }
 
-function VerticalBarChart({minsPerYear}) {
-    const years = minsPerYear.map(entry => parseInt(entry.year));
-    const minutes = minsPerYear.map(entry => entry.totalMinutes);
+interface VerticalBarChartProps {
+  yearAndMinsArray: Array<YearAndMins>;
+}
+
+function VerticalBarChart({yearAndMinsArray}: VerticalBarChartProps) {
+    const years = yearAndMinsArray.map(entry => entry.year);
+    const minutes = yearAndMinsArray.map(entry => entry.totalMinutes);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
     const maxMinutes = Math.max(...minutes);
 
-    function getMins(year) {
-        const matchingEntry = minsPerYear.find(entry => parseInt(entry.year) === year);
+    function getMins(year: number) {
+        const matchingEntry = yearAndMinsArray.find(entry => entry.year === year);
         if (matchingEntry === undefined) {
             return 0;
         } else {
@@ -89,14 +93,19 @@ function VerticalBarChart({minsPerYear}) {
         <div className="vertical-bar-chart-container">
             <div className="vertical-bar-chart">
                 <div className="vertical-bar-spacer-item"/>
-                {percentages.map(entry => <VerticalBarItem label={entry.year} percentage={entry.percentage}/>)}
+                {percentages.map(entry => <VerticalBarItem label={entry.year.toString()} percentage={entry.percentage}/>)}
                 <div className="vertical-bar-spacer-item"/>
             </div>
         </div>
     );
 }
 
-function VerticalBarItem({label, percentage}) {
+interface VerticalBarItemProps {
+  label: string;
+  percentage: number;
+}
+
+function VerticalBarItem({label, percentage}: VerticalBarItemProps) {
     const style = {
         height: percentage.toString() + "%",
     };
@@ -114,3 +123,31 @@ function VerticalBarItem({label, percentage}) {
 }
 
 export default App;
+
+
+// import React from 'react';
+// import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.tsx</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
