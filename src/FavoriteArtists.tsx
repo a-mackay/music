@@ -38,6 +38,7 @@ export default function favoriteArtists(): Set<string> {
         "Syrinx",
         "The Bug",
         "The Pretty Things",
+        "The Slits",
         "Viktor Vaughn",
         "Wiki",
         "Your Old Droog",
