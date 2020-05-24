@@ -4,7 +4,6 @@ export interface Album {
     name: string;
     totalDurationInSeconds: number;
     year: number;
-    iLikeThisAlbumALot?: boolean;
 }
 
 export function albumsByArtist(): Map<string, Array<Album>> {
@@ -32,7 +31,6 @@ export function albumsByArtist(): Map<string, Array<Album>> {
             "name": "We Got It From Here Thank You 4 Your Service",
             "totalDurationInSeconds": 3618,
             "year": 2016,
-            "iLikeThisAlbumALot": true,
         }
     ]],
     ["A1 People",  [
