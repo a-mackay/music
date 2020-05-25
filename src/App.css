@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-div {
+:root {
+    --my-blue: rgb(95, 204, 255);
+    --my-orange: rgb(255, 180, 67);
+}
+
+div.artistName {
     font-family: 'Bebas Neue', cursive;
+}
+
+h1.title {
+    font-family: 'Caveat', cursive;
+    background-color: var(--my-orange);
+    margin: 0px;
+    padding: 10px;
 }
 
 .App {
@@ -46,6 +59,7 @@ div {
 .vertical-bar-chart-container {
     padding: 20px 0px 20px 0px;
     overflow: scroll;
+    background-color: rgb(53, 53, 53);
 }
 
 .vertical-bar-chart {
@@ -81,11 +95,11 @@ div {
 
 .vertical-bar {
     box-sizing: border-box;
-    background-color: rgb(47, 189, 255, 0.5);
+    background-color: var(--my-blue);/*rgb(72, 197, 255);*/
     flex-shrink: 0;
     flex-grow: 0;
-    width: 100%;
-    border: 1px solid    rgb(30, 134, 182);
+    width: 90%;
+    border: 1px solid var(--my-blue);
     border-radius: 4px;
 }
 
@@ -102,4 +116,5 @@ div {
     padding: 0px;
     writing-mode: vertical-rl;
     text-orientation: sideways;
+    color: rgb(180, 180, 180);
 }

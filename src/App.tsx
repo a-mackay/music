@@ -4,14 +4,15 @@ import './App.css';
 import {Album, albumsByArtist} from './Albums';
 import favoriteArtists from './FavoriteArtists';
 
-const MIN_FONT_SIZE = 1; // 1em
-const MID_FONT_SIZE = 3; //2em
-const MAX_FONT_SIZE = 15; // 15em
+const SMALL_MIN_FONT_SIZE = 22;
+const SMALL_MAX_FONT_SIZE = 45;
+const LARGE_MIN_FONT_SIZE = 60;
+const LARGE_MAX_FONT_SIZE = 150;
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
+            {/* <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
@@ -24,7 +25,8 @@ function App() {
                 >
                     Learn React
                 </a>
-            </header>
+            </header> */}
+            <h1 className="title">"Coachella sucks this year"</h1>
             <VerticalBarChart yearAndMinsArray={yearAndMinsArray()} />
             <Artists artistAndMinsArray={artistAndMinsArray()} />
         </div>
@@ -44,16 +46,21 @@ function Artists({artistAndMinsArray}: ArtistsProps) {
 
     return <div>
         {artistAndMinsArray.map(({artist, totalMinutes}) => {
-            let maxFontSize = MID_FONT_SIZE;
-            let minFontSize = MIN_FONT_SIZE;
+            let maxFontSize = SMALL_MAX_FONT_SIZE;
+            let minFontSize = SMALL_MIN_FONT_SIZE;
             if (favArtists.has(artist)) {
-                maxFontSize = MAX_FONT_SIZE;
-                minFontSize = MID_FONT_SIZE;
+                maxFontSize = LARGE_MAX_FONT_SIZE;
+                minFontSize = LARGE_MIN_FONT_SIZE;
             }
 
             const fontSize = ((totalMinutes / maxMins) * (maxFontSize - minFontSize)) + minFontSize;
-            const fontSizeEm = fontSize.toFixed(3) + "em";
-            return <div style={{fontSize: fontSizeEm}}>{artist}</div>
+            const fontSizeEm = fontSize.toFixed(3) + "px";
+            return <div
+                style={{fontSize: fontSizeEm}}
+                className="artistName"
+            >
+                {artist}
+            </div>
         })}
     </div>
 }
